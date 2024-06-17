@@ -91,20 +91,32 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     display: block;
 }
 
+/* Slideshow Container */
 .slideshow-container {
   position: relative;
   max-width: 1000px;
   margin: auto;
+  overflow: hidden; /* Prevent overflow */
 }
 
+/* Slide Images */
+.mySlides img {
+  width: 100%;
+  height: 500px; /* Set a fixed height */
+  object-fit: cover; /* Scale the image to cover the container */
+}
+
+/* Slide Videos */
+.mySlides video {
+  width: 100%;
+  height: 500px; /* Set a fixed height */
+  object-fit: cover; /* Scale the video to cover the container */
+}
+
+/* Adjusted for consistency */
 .mySlides {
   display: none;
   text-align: center;
-}
-
-.mySlides img, .mySlides video {
-  max-width: 100%;
-  height: auto;
 }
 
 .prev, .next {
