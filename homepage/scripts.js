@@ -1,35 +1,41 @@
-document.addEventListener('DOMContentLoaded', () => {
-    let currentSlide = 0;
-    const slides = document.querySelectorAll('.slide');
-    const nextBtn = document.querySelector('.next');
-    const prevBtn = document.querySelector('.prev');
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
 
-    if (!slides.length || !nextBtn || !prevBtn) {
-        console.error('Slides or navigation buttons not found');
-        return;
-    }
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
 
-    const updateSlide = () => {
-        slides.forEach((slide, index) => {
-            slide.classList.remove('active');
-            if (index === currentSlide) {
-                slide.classList.add('active');
-            }
-        });
-    }
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
 
-    nextBtn.addEventListener('click', () => {
-        currentSlide = (currentSlide + 1) % slides.length;
-        updateSlide();
-    });
+// Automatic Slideshow - change image every 5 seconds
+setInterval(function() {
+  plusSlides(1);
+}, 5000);
 
-    prevBtn.addEventListener('click', () => {
-        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-        updateSlide();
-    });
-
-    setInterval(() => {
-        currentSlide = (currentSlide + 1) % slides.length;
-        updateSlide();
-    }, 5000);
-});
+function startScreensaver() {
+  const elem = document.querySelector('.slideshow-container');
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { // Firefox
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { // Chrome, Safari and Opera
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { // IE/Edge
+    elem.msRequestFullscreen();
+  }
+}
