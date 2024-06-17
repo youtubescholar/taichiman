@@ -56,12 +56,12 @@ nav {
 }
 
 .menu li a {
-    display: block;
-    padding: 0.625em; /* Consistent em unit padding */
+    display: inline-block; /* Inline-block for better spacing handling */
+    padding: 0.625em 1.25em; /* Padding for better spacing around text */
     color: white; /* Text color for readability */
     text-decoration: none; /* No underline */
     transition: background-color 0.5s ease, color 0.5s ease, border 0.5s ease; /* Smooth transition for hover effects */
-    border-radius: 12px; /* Smooth rounded corners */
+    border-radius: 50%; /* Smooth rounded corners for circular effect */
     border: 2px solid transparent; /* Initial border color transparent */
 }
 
@@ -71,7 +71,6 @@ nav {
     text-decoration: none; /* No underline for a smoother look */
     color: #FFD700; /* Bright color for hover state, ADA compliant */
     border: 2px solid #FFD700; /* Smooth border color change */
-    padding: 0.625em; /* Consistent padding */
     outline: none; /* Remove outline for better aesthetics */
 }
 
@@ -89,6 +88,32 @@ nav {
 /* Display menu when hamburger is checked */
 input[type="checkbox"]:checked + .hamburger + .menu {
     display: block;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+    .hamburger, #menu-toggle {
+        display: none; /* Hide hamburger icon and checkbox on larger screens */
+    }
+    .menu {
+        display: block;
+        background: none;
+    }
+    .menu li {
+        display: inline-block; /* Horizontal menu */
+    }
+    .menu li a {
+        padding: 15px;
+        border-radius: 50%; /* Consistent border-radius */
+        border: 2px solid transparent; /* Initial border color transparent */
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+    .menu {
+        width: 100%;
+    }
 }
 
 /* Slideshow Container */
@@ -209,7 +234,8 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     }
     .menu li a {
         padding: 15px;
-        border-radius: 12px; /* Consistent border-radius */
+        border-radius: 50%; /* Consistent border-radius */
+        border: 2px solid transparent; /* Initial border color transparent */
     }
 }
 
