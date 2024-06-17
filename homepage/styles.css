@@ -60,17 +60,19 @@ nav {
     padding: 0.625em; /* Consistent em unit padding */
     color: white; /* Text color for readability */
     text-decoration: none; /* No underline */
-    transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease; /* Smooth transition for hover effects */
-    border-radius: 50%; /* Circle effect */
+    transition: background-color 0.5s ease, color 0.5s ease, border 0.5s ease; /* Smooth transition for hover effects */
+    border-radius: 12px; /* Smooth rounded corners */
+    border: 2px solid transparent; /* Initial border color transparent */
 }
 
 /* Hover and focus states for links */
 .menu li a:hover, .menu li a:focus {
     background-color: #005f8a; /* Smooth background color change */
-    text-decoration: underline; /* Underline on hover or focus for better visibility */
+    text-decoration: none; /* No underline for a smoother look */
     color: #FFD700; /* Bright color for hover state, ADA compliant */
-    border: 2px solid white; /* White circle around the text */
-    padding: 0.5em; /* Adjust padding to account for border */
+    border: 2px solid #FFD700; /* Smooth border color change */
+    padding: 0.625em; /* Consistent padding */
+    outline: none; /* Remove outline for better aesthetics */
 }
 
 /* Hamburger icon styling */
@@ -103,7 +105,7 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     }
     .menu li a {
         padding: 15px;
-        border-radius: 0; /* Remove border-radius for desktop view */
+        border-radius: 12px; /* Consistent border-radius */
     }
 }
 
