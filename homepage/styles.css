@@ -220,6 +220,16 @@ input[type="checkbox"]:checked + .hamburger + .menu {
   background-color: #45a049;
 }
 
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1.25rem;
+    text-align: center;
+    display: block;
+    unicode-bidi: isolate;
+}
+
+
 /* Desktop styles */
 @media (min-width: 768px) {
     .hamburger, #menu-toggle {
