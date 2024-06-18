@@ -25,10 +25,10 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-// Automatic Slideshow - change image every 5 seconds
+// Automatic Slideshow - change image every 9 seconds
 setInterval(function() {
   plusSlides(1);
-}, 5000);
+}, 9000);
 
 function startScreensaver() {
   const elem = document.querySelector('.slideshow-container');
