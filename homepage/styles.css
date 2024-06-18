@@ -220,24 +220,24 @@ input[type="checkbox"]:checked + .hamburger + .menu {
   background-color: #45a049;
 }
 
-footer {
+.site-footer {
     background-color: #333;
     color: #fff;
-    padding: 1.25rem; 
+    padding: 1.25rem;
     text-align: center;
 }
 
-footer a {
+.site-footer a {
     color: #0077B6;
     text-decoration: none;
     transition: color 0.3s;
 }
 
-footer a:hover {
+.site-footer a:hover {
     color: #005994;
 }
 
-footer p {
+.site-footer p {
     margin: 0.625rem 0; 
 }
 
