@@ -90,139 +90,6 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     display: block;
 }
 
-main {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-h1, h2, h3 {
-    color: #0077B6;
-}
-
-.learning-background {
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin: 1rem auto;
-}
-
-.timeline {
-    border-left: 4px solid #0077B6;
-    border-radius: 4px;
-    margin-left: 20px;
-    padding: 10px;
-}
-
-.timeline-item {
-    position: relative;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    padding-left: 20px;
-}
-
-.timeline-item:last-child {
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
-
-.timeline-item::before {
-    content: '';
-    background-color: #0077B6;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    position: absolute;
-    left: -7px; /* Half of width to align center with the line */
-    top: 0;
-}
-
-.age-range {
-    font-weight: bold;
-    color: #333;
-}
-
-.martial-art {
-    display: block; /* Makes it go to the next line */
-    margin-top: 5px;
-}
-
-
-.practice-benefit {
-    margin-bottom: 2rem;
-    padding: 1rem;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.practice-benefit h2 {
-    color: #0077B6;
-    margin-bottom: 1rem;
-}
-
-.practice-benefit img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-}
-
-.practice-benefit p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #666;
-}
-
-
-.style-groups {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.style-groups div {
-    flex: 1 1 200px; /* Adjust width as needed */
-    margin-bottom: 1rem;
-}
-
-.style-groups img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-
-.site-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 1.25rem;
-    text-align: center;
-}
-
-.site-footer a {
-    color: #0077B6;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.site-footer a:hover {
-    color: #005994;
-}
-
-.site-footer p {
-    margin: 0.625rem 0; 
-}
-
-
-
-
-
-
 /* Desktop styles */
 @media (min-width: 768px) {
     .hamburger, #menu-toggle {
@@ -249,5 +116,153 @@ h1, h2, h3 {
     }
 }
 
+/* Slideshow Container */
+.slideshow-container {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+  overflow: hidden; /* Prevent overflow */
+}
 
+/* Slide Images */
+.mySlides img {
+  width: 100%;
+  height: 500px; /* Set a fixed height */
+  object-fit: cover; /* Scale the image to cover the container */
+}
 
+/* Slide Videos */
+.mySlides video {
+  width: 100%;
+  height: 500px; /* Set a fixed height */
+  object-fit: cover; /* Scale the video to cover the container */
+}
+
+/* Adjusted for consistency */
+.mySlides {
+  display: none;
+  text-align: center;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.dots-container {
+  text-align: center;
+  padding: 20px;
+  background: #ddd;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Message Section */
+.message {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.message h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.message p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.message button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.message button:hover {
+  background-color: #45a049;
+}
+
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.site-footer a {
+    color: #0077B6;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.site-footer a:hover {
+    color: #005994;
+}
+
+.site-footer p {
+    margin: 0.625rem 0; 
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+    .hamburger, #menu-toggle {
+        display: none; /* Hide hamburger icon and checkbox on larger screens */
+    }
+    .menu {
+        display: block;
+        background: none;
+    }
+    .menu li {
+        display: inline-block; /* Horizontal menu */
+    }
+    .menu li a {
+        padding: 15px;
+        border-radius: 50%; /* Consistent border-radius */
+        border: 2px solid transparent; /* Initial border color transparent */
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+    .menu {
+        width: 100%;
+    }
+}
