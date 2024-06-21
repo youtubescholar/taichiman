@@ -59,7 +59,7 @@ nav {
 .menu li a {
     display: inline-block; /* Inline-block for better spacing handling */
     padding: 0.625em 1.25em; /* Padding for better spacing around text */
-    color: 000; /* Text color for readability */
+    color: white; /* Text color for readability */
     text-decoration: none; /* No underline */
     transition: background-color 0.5s ease, color 0.5s ease, border 0.5s ease; /* Smooth transition for hover effects */
     border-radius: 50%; /* Smooth rounded corners for circular effect */
