@@ -244,3 +244,41 @@ h1, h2, h3 {
 .site-footer p {
     margin: 0.625rem 0; 
 }
+
+.faq-section {
+    padding: 20px;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.faq-item {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.accordion {
+    background-color: #0077B6;
+    color: #fff;
+    cursor: pointer;
+    padding: 18px;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.accordion:hover, .accordion.active {
+    background-color: #005994;
+}
+
+
+.panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+
+}
