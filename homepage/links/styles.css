@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #000; /* Example color, change as needed */
 }
 
 p {
@@ -88,6 +89,32 @@ nav {
 /* Display menu when hamburger is checked */
 input[type="checkbox"]:checked + .hamburger + .menu {
     display: block;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+    .hamburger, #menu-toggle {
+        display: none; /* Hide hamburger icon and checkbox on larger screens */
+    }
+    .menu {
+        display: block;
+        background: none;
+    }
+    .menu li {
+        display: inline-block; /* Horizontal menu */
+    }
+    .menu li a {
+        padding: 15px;
+        border-radius: 50%; /* Consistent border-radius */
+        border: 2px solid transparent; /* Initial border color transparent */
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+    .menu {
+        width: 100%;
+    }
 }
 
 main {
@@ -216,36 +243,4 @@ h1, h2, h3 {
 
 .site-footer p {
     margin: 0.625rem 0; 
-}
-
-
-
-
-
-
-
-/* Desktop styles */
-@media (min-width: 768px) {
-    .hamburger, #menu-toggle {
-        display: none; /* Hide hamburger icon and checkbox on larger screens */
-    }
-    .menu {
-        display: block;
-        background: none;
-    }
-    .menu li {
-        display: inline-block; /* Horizontal menu */
-    }
-    .menu li a {
-        padding: 15px;
-        border-radius: 50%; /* Consistent border-radius */
-        border: 2px solid transparent; /* Initial border color transparent */
-    }
-}
-
-/* Mobile styles */
-@media (max-width: 767px) {
-    .menu {
-        width: 100%;
-    }
 }
