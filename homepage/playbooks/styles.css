@@ -244,3 +244,30 @@ h1, h2, h3 {
 .site-footer p {
     margin: 0.625rem 0; 
 }
+
+dl {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+}
+
+dt {
+    font-size: 18px;
+    color: #333;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+dd {
+    margin: 0;
+    padding: 10px 0 20px 0;
+}
+
+dd:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+dd:last-child {
+    margin-bottom: 0;
+}
