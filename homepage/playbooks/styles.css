@@ -246,28 +246,30 @@ h1, h2, h3 {
 }
 
 dl {
-    background: #fff;
-    border: 1px solid #ddd;
+    background-color: #fff; /* Ensures contrast with text for readability */
+    border: 1px solid #ccc; /* Subtle border, not too distracting */
     padding: 20px;
+    margin-bottom: 1rem; /* Adds space below each list for better separation */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Consistent with box shadows used elsewhere for depth */
 }
 
 dt {
-    font-size: 18px;
-    color: #333;
-    font-weight: bold;
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
+    color: #333; /* Dark enough for good readability */
+    font-size: 1.25rem; /* Larger font size for clear hierarchy */
+    font-weight: bold; /* Maintains emphasis on terms */
+    border-bottom: 2px solid #0077B6; /* Uses theme color for visual consistency */
+    padding-bottom: 10px; /* Space between title and description */
+    margin-top: 20px; /* Separates terms when stacked */
 }
 
 dd {
-    margin: 0;
-    padding: 10px 0 20px 0;
-}
-
-dd:not(:last-child) {
-    border-bottom: 1px solid #eee;
+    font-size: 1rem; /* Comfortable reading size */
+    color: #666; /* Softer color for long reading sections */
+    padding: 10px 0 20px 0; /* Padding for readability */
+    border-bottom: 1px solid #eee; /* Light border for separating entries without heavy emphasis */
+    margin-bottom: 10px; /* Spacing below each description */
 }
 
 dd:last-child {
-    margin-bottom: 0;
+    border-bottom: none; /* Removes border from last item for cleaner look */
 }
