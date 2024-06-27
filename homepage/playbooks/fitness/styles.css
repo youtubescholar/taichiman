@@ -1,1 +1,56 @@
 
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    font-family: Arial, sans-serif;
+    color: #f5f5dc; /* beige */
+}
+
+header {
+    background-color: #808080; /* grey */
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #00ffff; /* cyan/light blue */
+    font-size: 2em;
+}
+
+p {
+    margin: 20px 0;
+    color: inherit;
+}
+
+input, button {
+    font-size: 1em; /* Scalable EM unit */
+    padding: 10px;
+    margin-top: 5px;
+}
+
+input {
+    border: 2px solid #c0c0c0; /* silvery metallic light grey */
+    background: transparent;
+    color: #c0c0c0;
+    width: 250px;
+}
+
+button {
+    background-color: #f5f5dc; /* beige */
+    border: 2px solid #c0c0c0; /* metallic light grey */
+    color: #000000; /* black text */
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #c0c0c0; /* metallic light grey */
+    color: #f5f5dc; /* beige text */
+}
+
+/* Accessibility focus styles */
+input:focus, button:focus {
+    outline: none;
+    border-color: #00ffff; /* cyan/blue focus ring */
+}
