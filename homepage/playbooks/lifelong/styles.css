@@ -143,9 +143,37 @@ input[type="checkbox"]:checked + .hamburger + .menu {
   cursor: pointer; /* Pointer cursor for the button */
 }
 
+.info-section {
+  margin-top: 30px; /* Space between the button and the text */
+  padding: 20px;
+  background-color: #ffffff; /* Contrast with the button */
+  border: 1px solid #ccc; /* Subtle border */
+  font-size: 16px; /* Readable font size */
+  line-height: 1.6; /* Adequate line spacing for readability */
+}
+
+.info-section h2 {
+  font-size: 24px; /* Larger font size for headings */
+  color: #333; /* High contrast for readability */
+  margin-bottom: 10px; /* Space between heading and text */
+}
+
+.info-section p {
+  margin-bottom: 10px; /* Space between paragraphs */
+}
+
 @media (max-width: 600px) {
   .grid-item, .back-button {
     font-size: 14px;
     padding: 15px; /* Adjust padding and font size for smaller screens */
   }
+
+      .info-section {
+    font-size: 14px; /* Smaller font size on mobile for better fit */
+  }
+
+  .info-section h2 {
+    font-size: 20px; /* Adjust heading size on mobile */
+  }
+    
 }
