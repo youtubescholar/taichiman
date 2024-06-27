@@ -1,0 +1,38 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.grid-item, .back-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  color: #333; /* High contrast text */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.grid-item:hover, .grid-item:focus, .back-button:hover, .back-button:focus {
+  background-color: #e8e8e8; /* Slightly darker background on hover/focus */
+  outline: 3px solid blue; /* High contrast outline for focus */
+}
+
+.back-button {
+  margin-top: 20px; /* Space from the grid */
+  width: 100%; /* Full width for easier mobile access */
+  cursor: pointer; /* Pointer cursor for the button */
+}
+
+@media (max-width: 600px) {
+  .grid-item, .back-button {
+    font-size: 14px;
+    padding: 15px; /* Adjust padding and font size for smaller screens */
+  }
+}
