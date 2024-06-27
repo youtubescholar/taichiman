@@ -1,44 +1,51 @@
-
 body, html {
     margin: 0;
     padding: 0;
-    background-color: #000000;
+    background-color: #000000; /* full page black background */
     font-family: Arial, sans-serif;
     color: #f5f5dc; /* beige */
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-header {
-    background-color: #808080; /* grey */
+.container {
     text-align: center;
-    padding: 20px;
 }
 
 h1 {
     color: #00ffff; /* cyan/light blue */
-    font-size: 2em;
+    font-size: 3em; /* larger font size */
+    margin-bottom: 0.5em;
 }
 
 p {
-    margin: 20px 0;
+    margin: 0.5em 0 1em; /* space between elements */
     color: inherit;
+    font-size: 1.5em;
 }
 
 input, button {
-    font-size: 1em; /* Scalable EM unit */
-    padding: 10px;
-    margin-top: 5px;
+    font-size: 1.2em; /* larger and more readable */
+    padding: 15px;
+    margin-top: 10px;
+    width: 80%; /* wider input and button */
+    max-width: 500px; /* maximum width */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 input {
     border: 2px solid #c0c0c0; /* silvery metallic light grey */
     background: transparent;
     color: #c0c0c0;
-    width: 250px;
 }
 
 button {
     background-color: #f5f5dc; /* beige */
-    border: 2px solid #c0c0c0; /* metallic light grey */
+    border: 3px solid #c0c0c0; /* thicker border for visibility */
     color: #000000; /* black text */
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
