@@ -49,3 +49,46 @@ main {
 main p {
     font-size: 1.5em;
 }
+
+/* Existing styles from previous setup will apply here as well */
+
+.contact-and-times {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.email-link {
+    font-size: 1.5em;
+    color: #00ffff; /* Cyan for visibility and emphasis */
+}
+
+.availability {
+    list-style: none;
+    padding: 0;
+}
+
+.availability li {
+    margin-bottom: 5px; /* Space between list items for readability */
+}
+
+.video-lessons h2 {
+    margin-top: 20px;
+}
+
+.video-lessons ul {
+    list-style: none;
+    padding: 0;
+}
+
+.video-lessons ul li a {
+    color: #f5f5dc; /* Beige for links */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.video-lessons ul li a:hover {
+    color: #00ffff; /* Light blue on hover */
+}
+
