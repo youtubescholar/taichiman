@@ -10,6 +10,7 @@ header {
     background-color: #202020; /* dark gray for header */
     display: flex;
     align-items: center;
+    justify-content: space-between; /* Aligns children to the space-between */
     padding: 10px;
     height: 120px;
 }
@@ -17,13 +18,14 @@ header {
 .logo {
     width: 120px;
     height: 120px; /* Logo dimensions */
+    margin-left: 10px; /* Slight margin to ensure it's not hugging the edge */
 }
 
 nav ul {
     list-style: none;
     display: flex;
     padding: 0;
-    margin-left: 20px; /* Space after the logo */
+    margin-right: 20px; /* Right margin for right-side padding */
 }
 
 nav ul li {
