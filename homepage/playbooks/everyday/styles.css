@@ -1,1 +1,51 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    color: #f5f5dc; /* beige */
+}
 
+header {
+    background-color: #202020; /* dark gray for header */
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    height: 120px;
+}
+
+.logo {
+    width: 120px;
+    height: 120px; /* Logo dimensions */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin-left: 20px; /* Space after the logo */
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f5f5dc; /* beige links */
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00ffff; /* Light blue on hover */
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+main p {
+    font-size: 1.5em;
+}
