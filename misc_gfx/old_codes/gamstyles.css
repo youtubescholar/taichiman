@@ -1,0 +1,41 @@
+body {
+    background-color: #f0f0f0;
+    /* Broad font family for optimal compatibility and performance */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    color: #333;
+    line-height: 1.5;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+pre#guide {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    overflow: auto;
+    white-space: pre-wrap; /* Allows preformatted text to wrap */
+    word-wrap: break-word; /* Ensures text breaks to prevent overflow */
+    max-width: 100%; /* Prevents the pre tag from extending beyond the viewport */
+    /* Monospaced font for preformatted sections */
+    font-family: Consolas, 'Lucida Console', Monaco, monospace;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    pre#guide {
+        padding: 10px;
+        font-size: 14px; /* Smaller font size for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    pre#guide {
+        font-size: 12px; /* Even smaller font size for very small screens */
+    }
+}
