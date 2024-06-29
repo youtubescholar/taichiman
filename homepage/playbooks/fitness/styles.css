@@ -1,63 +1,179 @@
-body, html {
+body {
+    font-family: Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #000000; /* full page black background */
-    font-family: Arial, sans-serif;
-    color: #f5f5dc; /* beige */
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.container {
-    text-align: center;
-}
-
-h1 {
-    color: #00ffff; /* cyan/light blue */
-    font-size: 3em; /* larger font size */
-    margin-bottom: 0.5em;
+    box-sizing: border-box;
+    color: #000; /* Example color, change as needed */
 }
 
 p {
-    margin: 0.5em 0 1em; /* space between elements */
-    color: inherit;
-    font-size: 1.5em;
+    margin-bottom: 1em; /* Consistent spacing for paragraphs */
 }
 
-input, button {
-    font-size: 1.2em; /* larger and more readable */
-    padding: 15px;
-    margin-top: 10px;
-    width: 80%; /* wider input and button */
-    max-width: 500px; /* maximum width */
+/* Header styling STACKBLOCK00 */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Wraps content on smaller screens */
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+}
+
+.left-section, .center-section, .right-section {
+    flex: 1;
+    text-align: center;
+    padding: 5px;
+}
+
+/* Image styling within center section */
+.center-section .images {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between images */
+    margin-bottom: 10px; /* Margin below images */
+}
+
+.center-section .images img, .center-section > img {
+    width: 120px;
+    height: auto;
+}
+
+/* Navigation styling */
+nav {
+    background-color: #0077B6; /* Bright blue background */
+    padding: 0.625em 1.25em; /* Padding around the nav content */
+}
+
+/* Menu styling */
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #333; /* Dark background for the menu */
+    text-align: center;
+    display: none; /* Hidden by default, shown when hamburger is clicked */
+}
+
+.menu li a {
+    display: inline-block; /* Inline-block for better spacing handling */
+    padding: 0.625em 1.25em; /* Padding for better spacing around text */
+    color: white; /* Text color for readability */
+    text-decoration: none; /* No underline */
+    transition: background-color 0.5s ease, color 0.5s ease, border 0.5s ease; /* Smooth transition for hover effects */
+    border-radius: 50%; /* Smooth rounded corners for circular effect */
+    border: 2px solid transparent; /* Initial border color transparent */
+}
+
+/* Hover and focus states for links */
+.menu li a:hover, .menu li a:focus {
+    background-color: #005f8a; /* Smooth background color change */
+    text-decoration: none; /* No underline for a smoother look */
+    color: #FFD700; /* Bright color for hover state, ADA compliant */
+    border: 2px solid #FFD700; /* Smooth border color change */
+    outline: none; /* Remove outline for better aesthetics */
+}
+
+/* Hamburger icon styling */
+.hamburger {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-input {
-    border: 2px solid #c0c0c0; /* silvery metallic light grey */
-    background: transparent;
-    color: #c0c0c0;
-}
-
-button {
-    background-color: #f5f5dc; /* beige */
-    border: 3px solid #c0c0c0; /* thicker border for visibility */
-    color: #000000; /* black text */
+    font-size: 1.875em; /* Converted from 30px for better scalability */
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+    padding: 0.625em; /* Consistent em unit padding */
+    background: #333; /* Matching menu background */
+    color: white; /* Icon color */
 }
 
-button:hover {
-    background-color: #c0c0c0; /* metallic light grey */
-    color: #f5f5dc; /* beige text */
+/* Display menu when hamburger is checked */
+input[type="checkbox"]:checked + .hamburger + .menu {
+    display: block;
 }
 
-/* Accessibility focus styles */
-input:focus, button:focus {
-    outline: none;
-    border-color: #00ffff; /* cyan/blue focus ring */
+/* Desktop styles */
+@media (min-width: 768px) {
+    .hamburger, #menu-toggle {
+        display: none; /* Hide hamburger icon and checkbox on larger screens */
+    }
+    .menu {
+        display: block;
+        background: none;
+    }
+    .menu li {
+        display: inline-block; /* Horizontal menu */
+    }
+    .menu li a {
+        padding: 15px;
+        border-radius: 50%; /* Consistent border-radius */
+        border: 2px solid transparent; /* Initial border color transparent */
+    }
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  grid-template-rows: repeat(9, 1fr);
+  gap: 10px;
+  padding: 20px;
+}
+
+.grid-item, .back-button {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  font-size: 16px;
+  color: #333; /* High contrast text */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.grid-item:hover, .grid-item:focus, .back-button:hover, .back-button:focus {
+  background-color: #e8e8e8; /* Slightly darker background on hover/focus */
+  outline: 3px solid blue; /* High contrast outline for focus */
+}
+
+.back-button {
+  margin-top: 20px; /* Space from the grid */
+  width: 100%; /* Full width for easier mobile access */
+  cursor: pointer; /* Pointer cursor for the button */
+}
+
+.info-section {
+  margin-top: 30px; /* Space between the button and the text */
+  padding: 20px;
+  background-color: #ffffff; /* Contrast with the button */
+  border: 1px solid #ccc; /* Subtle border */
+  font-size: 16px; /* Readable font size */
+  line-height: 1.6; /* Adequate line spacing for readability */
+}
+
+.info-section h2 {
+  font-size: 24px; /* Larger font size for headings */
+  color: #333; /* High contrast for readability */
+  margin-bottom: 10px; /* Space between heading and text */
+}
+
+.info-section p {
+  margin-bottom: 10px; /* Space between paragraphs */
+}
+
+@media (max-width: 600px) {
+  .grid-item, .back-button {
+    font-size: 14px;
+    padding: 15px; /* Adjust padding and font size for smaller screens */
+  }
+
+      .info-section {
+    font-size: 14px; /* Smaller font size on mobile for better fit */
+  }
+
+  .info-section h2 {
+    font-size: 20px; /* Adjust heading size on mobile */
+  }
+    
 }
