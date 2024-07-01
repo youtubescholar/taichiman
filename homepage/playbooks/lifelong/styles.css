@@ -113,8 +113,8 @@ input[type="checkbox"]:checked + .hamburger + .menu {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(9, 1fr);
-  grid-template-rows: repeat(9, 1fr);
+  grid-template-columns: repeat(9, 1fr); /* Default to 9 columns for larger screens */
+  grid-template-rows: auto; /* Rows size to content */
   gap: 10px;
   padding: 20px;
 }
@@ -161,6 +161,29 @@ input[type="checkbox"]:checked + .hamburger + .menu {
 .info-section p {
   margin-bottom: 10px; /* Space between paragraphs */
 }
+
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(6, 1fr); /* Reduce to 6 columns for tablets and small desktops */
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr); /* Reduce to 3 columns for larger mobile devices */
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr); /* Reduce to 2 columns for smaller mobile screens */
+  }
+}
+
+@media (max-width: 400px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Single column layout for very small devices */
+  }
 
 @media (max-width: 600px) {
   .grid-item, .back-button {
