@@ -237,6 +237,24 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     background-color: #45a049;
 }
 
+.message a.button {
+    display: inline-block; /* Makes the link behave like a button */
+    padding: 10px 20px;
+    font-size: 16px;
+    text-decoration: none; /* Removes underline from links */
+    color: white; /* Text color */
+    background-color: #4CAF50; /* Green background */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Cursor appears as a pointer */
+    border: none; /* No border */
+    margin: 5px; /* Space around buttons */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.message a.button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
 .message a:focus, .message button:focus {
     outline: 2px solid #FFD700; /* High visibility for focus state */
 }
