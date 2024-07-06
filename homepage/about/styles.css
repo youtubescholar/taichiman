@@ -226,6 +226,27 @@ h1, h2, h3 {
     margin-bottom: 0.5rem;
 }
 
+.focuses h2 {
+    margin-top: 2rem; /* Adds more space above the section heading */
+}
+
+.focuses ul {
+    padding-left: 0; /* Removes padding to align list properly */
+    list-style-type: none; /* Removes bullet points for a cleaner look */
+    columns: 2;  /* Arranges the list in two columns for better readability */
+    max-width: 600px; /* Limits the width for easier reading */
+    margin: auto; /* Centers the list in the section */
+}
+
+.focuses li {
+    margin-bottom: 0.5rem; /* Adds a little space below each list item */
+}
+
+.message p {
+    text-align: left; /* Aligns text left for better readability */
+}
+
+
 
 .site-footer {
     background-color: #333;
