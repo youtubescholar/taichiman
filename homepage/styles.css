@@ -192,17 +192,17 @@ input[type="checkbox"]:checked + .hamburger + .menu {
 
 /* Message Section */
 .message {
-    text-align: left; /* Align text to the left for easier reading */
+    text-align: center; /* Center all text within the message section */
     margin-top: 20px;
     padding: 20px;
-    background-color: #f4f4f4; /* Light background to reduce strain */
+    background-color: #f4f4f4; /* Light background to reduce visual strain */
     color: #333;
 }
 
 .message h2, .message h3 {
     font-size: 24px;
     margin-bottom: 10px;
-    color: #4CAF50; /* Green color for headings to differentiate */
+    color: #4CAF50; /* Distinct green color for headings */
 }
 
 .message p {
@@ -212,8 +212,11 @@ input[type="checkbox"]:checked + .hamburger + .menu {
 }
 
 .message ul {
-    list-style-type: none; /* No bullets for a cleaner look */
+    list-style-type: none; /* Cleaner look without bullets */
     padding: 0;
+    margin: 0 auto; /* Center the list */
+    text-align: left; /* Align list text to the left */
+    max-width: 600px; /* Set a max-width for better readability on wider screens */
 }
 
 .message li {
