@@ -191,6 +191,28 @@ input[type="checkbox"]:checked + .hamburger + .menu {
 }
 
 /* Message Section */
+
+.button-style {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #4CAF50;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button-style:hover {
+    background-color: #45a049;
+}
+
+.button-style:focus {
+    outline: 2px solid #FFD700;
+}
+
+
 .message {
     text-align: center; /* Center all text within the message section */
     margin-top: 20px;
