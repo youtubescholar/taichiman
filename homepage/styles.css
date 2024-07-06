@@ -192,32 +192,50 @@ input[type="checkbox"]:checked + .hamburger + .menu {
 
 /* Message Section */
 .message {
-  text-align: center;
-  margin-top: 20px;
+    text-align: left; /* Align text to the left for easier reading */
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f4f4f4; /* Light background to reduce strain */
+    color: #333;
 }
 
-.message h2 {
-  font-size: 24px;
-  margin-bottom: 10px;
+.message h2, .message h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #4CAF50; /* Green color for headings to differentiate */
 }
 
 .message p {
-  font-size: 18px;
-  margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.message ul {
+    list-style-type: none; /* No bullets for a cleaner look */
+    padding: 0;
+}
+
+.message li {
+    margin-bottom: 10px;
 }
 
 .message button {
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
 }
 
 .message button:hover {
-  background-color: #45a049;
+    background-color: #45a049;
+}
+
+.message a:focus, .message button:focus {
+    outline: 2px solid #FFD700; /* High visibility for focus state */
 }
 
 .site-footer {
