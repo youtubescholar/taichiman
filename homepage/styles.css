@@ -126,16 +126,16 @@ input[type="checkbox"]:checked + .hamburger + .menu {
 
 /* Slide Images */
 .mySlides img {
-  width: 100%;
+  width: 100%;  /* Ensures width is always 100% of the container */
   height: auto; /* Height automatically adjusts to maintain the aspect ratio */
-  object-fit: contain; /* Ensures the image fits within the container without cropping */
+  object-fit: cover; /* Cover to ensure the entire container is filled */
 }
 
 /* Slide Videos */
 .mySlides video {
-  width: 100%;
+  width: 100%;  /* Ensures width is always 100% of the container */
   height: auto; /* Height automatically adjusts to maintain the aspect ratio */
-  object-fit: contain; /* Ensures the video fits within the container without cropping */
+  object-fit: cover; /* Cover to ensure the entire container is filled */
 }
 
 /* Adjusted for consistency */
@@ -266,12 +266,16 @@ input[type="checkbox"]:checked + .hamburger + .menu {
         width: 100%;
     }
 
-    @media (min-width: 768px) {
-  .mySlides img, .mySlides video {
-    height: 50vh; /* Responsive height based on the viewport height */
-    object-fit: contain; /* Adjust if you want no part of the image to be cut off */
+@media (min-width: 768px) {
+  .slideshow-container {
+    width: 1920px;  /* Fixed width for desktop */
+    height: 1080px; /* Fixed height for desktop */
+    margin: auto;   /* Centering the slideshow */
   }
 
-
+  .mySlides img, .mySlides video {
+    height: 1080px; /* Fixed height */
+    object-fit: cover; /* Ensures the image covers the full area without stretching */
+  }
     
 }
