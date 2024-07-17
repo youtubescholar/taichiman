@@ -16,7 +16,7 @@ p {
     align-items: center;
     flex-wrap: wrap; /* Wraps content on smaller screens */
     padding: 10px;
-    background-color: #000;
+    background-color: #333;
     color: #fff;
 }
 
