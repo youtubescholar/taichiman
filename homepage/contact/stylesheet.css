@@ -1,0 +1,55 @@
+/* General styling for the whole page */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h2 {
+    color: #444;
+}
+
+/* Styling for form elements */
+input[type="date"],
+textarea {
+    width: 100%; /* Full width to accommodate different screen sizes */
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in the element's total width */
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Enhance accessibility */
+a, a:hover, a:focus {
+    color: #0000EE;
+    text-decoration: none;
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+    body {
+        padding: 5px;
+    }
+    textarea, input[type="date"] {
+        width: 100%; /* Ensures form elements fit small screens */
+    }
+}
