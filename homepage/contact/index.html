@@ -13,13 +13,13 @@
             var witnesses = document.getElementById('witnesses').value;
             var additionalInfo = document.getElementById('additional-info').value;
 
-            var emailBody = Date of Incident: ${dateOfIncident}%0D%0A%0D%0A +
-                            Description of Incident: ${descriptionOfIncident}%0D%0A%0D%0A +
-                            Names of Involved Parties: ${involvedParties}%0D%0A%0D%0A +
-                            Witnesses: ${witnesses}%0D%0A%0D%0A +
-                            Additional Information: ${additionalInfo};
+            var emailBody = `Date of Incident: ${dateOfIncident}%0D%0A` +
+                            `Description of Incident: ${descriptionOfIncident}%0D%0A` +
+                            `Names of Involved Parties: ${involvedParties}%0D%0A` +
+                            `Witnesses: ${witnesses}%0D%0A` +
+                            `Additional Information: ${additionalInfo}`;
 
-            var mailtoLink = mailto:your_email@example.com?subject=CONDUCT_VIOLATION Report of Code of Conduct Violation&body=${emailBody};
+            var mailtoLink = `mailto:taichiman@tutamail.com?subject=CONDUCT_VIOLATION Report of Code of Conduct Violation&body=${emailBody}`;
             window.location.href = mailtoLink;
         }
     </script>
@@ -40,7 +40,7 @@
         <label for="witnesses">Witnesses (if any):</label><br>
         <textarea id="witnesses" name="witnesses" rows="2" cols="50"></textarea><br><br>
 
-        <label for="additional-info">Additional Information:</label><br>
+        <label for="additional-info">Additional Information:</label<br>
         <textarea id="additional-info" name="additional_information" rows="4" cols="50"></textarea><br><br>
 
         <input type="submit" value="Submit">
@@ -48,3 +48,4 @@
     <p>*Please submit this form to report any violations. Your report will be handled promptly and with discretion.</p>
 </body>
 </html>
+
