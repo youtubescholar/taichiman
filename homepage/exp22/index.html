@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor Profile - Active Martial Network</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+        }
+
+        .profile-summary, .class-info, .feedback, .contact-info, .navigation-info, .online-class-info, .location-info, .conduct-info, .associated-links, .teacher-materials {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .profile-summary img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+
+        .profile-summary div {
+            display: flex;
+            align-items: center;
+        }
+
+        .profile-summary h2 {
+            margin: 0;
+        }
+
+        .descriptor-feedback {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+
+        .descriptor-feedback button {
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .descriptor-feedback button:hover {
+            background-color: #0056b3;
+        }
+
+        .feedback-results {
+            margin-top: 20px;
+        }
+
+        .feedback-results ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .feedback-results li {
+            margin-bottom: 5px;
+        }
+
+        .class-schedule table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .class-schedule th, .class-schedule td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .contact-info ul, .associated-links ul, .teacher-materials ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .contact-info li, .associated-links li, .teacher-materials li {
+            margin-bottom: 10px;
+        }
+
+        .navigation-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .navigation-info a:hover {
+            text-decoration: underline;
+        }
+
+        .location-info ul, .conduct-info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .location-info li, .conduct-info li {
+            margin-bottom: 10px;
+        }
+
+        .checkbox-label {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .checkbox-label input {
+            margin-right: 10px;
+        }
+
+        .associated-links a, .teacher-materials a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .associated-links a:hover, .teacher-materials a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Instructor Profile: [Instructor Name]</h1>
+        </div>
+        <div class="profile-summary">
+            <div>
+                <img src="[Instructor Image URL]" alt="Instructor Photo">
+                <div>
+                    <h2>[Instructor Name]</h2>
+                    <p><strong>Martial Arts Style:</strong> [Style]</p>
+                    <p><strong>Experience:</strong> [Years of Experience] years</p>
+                    <p>[Short Bio]</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="class-info">
+            <h2>Class Information</h2>
+            <div class="class-schedule">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Class Name</th>
+                            <th>Level</th>
+                            <th>Days</th>
+                            <th>Time</th>
+                            <th>Price</th>
+                            <th>Drop-In Allowed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>[Class 1 Name]</td>
+                            <td>[Beginner/Intermediate/Advanced]</td>
+                            <td>[Days]</td>
+                            <td>[Time]</td>
+                            <td>[Price]</td>
+                            <td>Yes/No</td>
+                        </tr>
+                        <tr>
+                            <td>[Class 2 Name]</td>
+                            <td>[Beginner/Intermediate/Advanced]</td>
+                            <td>[Days]</td>
+                            <td>[Time]</td>
+                            <td>[Price]</td>
+                            <td>Yes/No</td>
+                        </tr>
+                        <!-- More classes as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="location-info">
+            <h2>Location and Amenities</h2>
+            <h4>Location Type:</h4>
+            <p>[Public Park/Private Gym/Online]</p>
+            <h4>Amenities:</h4>
+            <ul>
+                <li><strong>Equipment:</strong> [Mats, weights, gloves available/required]</li>
+                <li><strong>Facilities:</strong> [Showers, lockers, Wi-Fi, etc.]</li>
+                <li><strong>Accessibility:</strong> [Wheelchair accessible, ramps, elevators]</li>
+                <li><strong>Nearby Amenities:</strong> [Cafes, shops, restrooms]</li>
+            </ul>
+            <h4>Cost and Access:</h4>
+            <p>[Free class/Open to public/Membership required/Entry fee]</p>
+            <h4>Rules and Guidelines:</h4>
+            <ul>
+                <li>[No shoes on mats/Specific attire required/Other rules]</li>
+                <li>[Safety equipment required: gloves, mouthguards, etc.]</li>
+            </ul>
+            <h4>Safety and Weather Considerations:</h4>
+            <p>Classes may be rescheduled in case of severe weather. Check for updates on our website or contact us.</p>
+        </div>
+
+        <div class="conduct-info">
+            <h2>Code of Conduct</h2>
+            <div class="checkbox-label">
+                <input type="checkbox" id="codeOfConduct" name="codeOfConduct" required>
+                <label for="codeOfConduct">I acknowledge that there is a Code of Conduct for this class.</label>
+            </div>
+            <p>All participants are expected to adhere to the following principles:</p>
+            <ul>
+                <li>Respect for all participants and instructors.</li>
+                <li>Punctuality and commitment to scheduled classes.</li>
+                <li>Adherence to safety guidelines and equipment usage.</li>
+            </ul>
+            <p>For the full Code of Conduct, please visit: <a href="[Code of Conduct URL]" target="_blank">Code of Conduct Document</a></p>
+        </div>
+
+        <div class="associated-links">
+            <h2>Associated Links</h2>
+            <ul>
+                <li><a href="[Independent Entity URL]" target="_blank">Independent Entity</a></li>
+                <li><a href="[Root Corporation URL]" target="_blank">Root Corporation</a></li>
+                <!-- More links as needed -->
+            </ul>
+        </div>
+
+        <div class="teacher-materials">
+            <h2>Teacher's Materials</h2>
+            <ul>
+                <li><a href="[Podcast URL]" target="_blank">My Podcast</a></li>
+                <li><a href="[Blog URL]" target="_blank">My Blog</a></li>
+                <li><a href="[Wiki URL]" target="_blank">My Wiki</a></li>
+                <li><a href="[Visual Diary URL]" target="_blank">My Visual Diary</a></li>
+                <li><a href="[Journal URL]" target="_blank">My Journal</a></li>
+                <li><a href="[Templates URL]" target="_blank">My Templates</a></li>
+                <li><a href="[Media URL]" target="_blank">My Media</a></li>
+                <li><a href="[Educational Series URL]" target="_blank">My Written Educational Series</a></li>
+                <li><a href="[Video Series URL]" target="_blank">My Video Educational Series</a></li>
+                <!-- More materials as needed -->
+            </ul>
+        </div>
+
+        <div class="navigation-info">
+            <h2>How to Get Here</h2>
+            <p><strong>Address:</strong> 123 Martial Arts St, City, State, ZIP</p>
+            <h4>Directions:</h4>
+            <p>From the city center, take Route 10 northbound and exit at Main St. The dojo is located two blocks east of the station. Look for the red brick building with the large "Martial Arts" sign.</p>
+            <h4>Public Transport Options:</h4>
+            <ul>
+                <li>Bus: Take bus line 5 to Main St.</li>
+                <li>Subway: Blue Line to Martial Arts Station.</li>
+            </ul>
+            <h4>Landmarks:</h4>
+            <p>Near the Central Park entrance and across from the Main Library.</p>
+            <h4>Parking:</h4>
+            <p>Free parking is available in the lot adjacent to the building. Overflow parking is available on 2nd St.</p>
+            <h4>Accessibility:</h4>
+            <p>The facility is wheelchair accessible with ramps and elevators. Please contact us if you require any assistance.</p>
+            <h4>Traffic and Alerts:</h4>
+            <p>Check live traffic updates <a href="https://www.google.com/maps" target="_blank">here</a>.</p>
+            <h4>Weather Considerations:</h4>
+            <p>Classes may be affected by severe weather. Please check our website or contact us for updates.</p>
+            <h4>Download Directions:</h4>
+            <p><a href="[PDF Link]" target="_blank">Download PDF directions</a> for offline use.</p>
+        </div>
+
+        <div class="feedback">
+            <h2>Feedback from Students</h2>
+            <div class="descriptor-feedback">
+                <button onclick="submitFeedback('Curious')">Curious</button>
+                <button onclick="submitFeedback('Exciting')">Exciting</button>
+                <button onclick="submitFeedback('Clear')">Clear</button>
+                <button onclick="submitFeedback('Enjoyable')">Enjoyable</button>
+                <button onclick="submitFeedback('Engaging')">Engaging</button>
+                <button onclick="submitFeedback('Helpful')">Helpful</button>
+                <button onclick="submitFeedback('Satisfying')">Satisfying</button>
+            </div>
+            <div class="feedback-results">
+                <h3>Feedback Results</h3>
+                <ul>
+                    <li>Curious: <span id="curiousCount">0</span></li>
+                    <li>Exciting: <span id="excitingCount">0</span></li>
+                    <li>Clear: <span id="clearCount">0</span></li>
+                    <li>Enjoyable: <span id="enjoyableCount">0</span></li>
+                    <li>Engaging: <span id="engagingCount">0</span></li>
+                    <li>Helpful: <span id="helpfulCount">0</span></li>
+                    <li>Satisfying: <span id="satisfyingCount">0</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="online-class-info">
+            <h3>Online Class Instructions</h3>
+            <p>Join our online classes via Zoom. Ensure you have a stable internet connection and a safe space for training.</p>
+            <h4>Steps to Join:</h4>
+            <ol>
+                <li>Register for the class through our platform.</li>
+                <li>Receive a Zoom link via email.</li>
+                <li>Join the class 5 minutes before the start time.</li>
+            </ol>
+            <h4>Online Safety Tips:</h4>
+            <ul>
+                <li>Ensure your training area is free from hazards.</li>
+                <li>Wear appropriate attire and have necessary equipment ready.</li>
+                <li>Mute your microphone unless speaking to avoid distractions.</li>
+            </ul>
+        </div>
+
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <ul>
+                <li><strong>Phone:</strong> [Phone Number]</li>
+                <li><strong>Email:</strong> <a href="mailto:[Email Address]">[Email Address]</a></li>
+                <li><strong>Location:</strong> [Address]</li>
+                <li><strong>Website:</strong> <a href="[Website URL]" target="_blank">[Website URL]</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Initialize feedback counts
+        const feedbackCounts = {
+            Curious: 0,
+            Exciting: 0,
+            Clear: 0,
+            Enjoyable: 0,
+            Engaging: 0,
+            Helpful: 0,
+            Satisfying: 0
+        };
+
+        // Function to handle feedback submission
+        function submitFeedback(descriptor) {
+            feedbackCounts[descriptor]++;
+            updateFeedbackDisplay();
+        }
+
+        // Function to update feedback display
+        function updateFeedbackDisplay() {
+            document.getElementById('curiousCount').innerText = feedbackCounts.Curious;
+            document.getElementById('excitingCount').innerText = feedbackCounts.Exciting;
+            document.getElementById('clearCount').innerText = feedbackCounts.Clear;
+            document.getElementById('enjoyableCount').innerText = feedbackCounts.Enjoyable;
+            document.getElementById('engagingCount').innerText = feedbackCounts.Engaging;
+            document.getElementById('helpfulCount').innerText = feedbackCounts.Helpful;
+            document.getElementById('satisfyingCount').innerText = feedbackCounts.Satisfying;
+        }
+    </script>
+</body>
+</html>
