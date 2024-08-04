@@ -5,7 +5,7 @@ body, html {
     overflow-y: auto;
     font-family: Arial, sans-serif;
     box-sizing: border-box;
-    color: #000;
+    color: #333; /* Darker text color for better readability */
 }
 
 header, nav, main, footer {
@@ -32,13 +32,12 @@ header, nav, main, footer {
     color: white;
     text-decoration: none;
     transition: background-color 0.5s, color 0.5s;
-    border: 2px solid transparent; /* Ensure the border is consistent */
+    border-radius: 50%; /* Circular effect */
 }
 
 .menu li a:hover, .menu li a:focus {
     background-color: #005f8a;
     color: #FFD700;
-    border: 2px solid #FFD700; /* Highlight border on hover */
 }
 
 .hamburger {
@@ -61,11 +60,9 @@ header, nav, main, footer {
     }
     .menu li {
         display: inline-block; /* Horizontal menu */
-        border-radius: 50%; /* Circular effect */
     }
     .menu li a {
         padding: 15px;
-        border-radius: 50%; /* Consistent border-radius */
     }
 }
 
@@ -76,15 +73,27 @@ header, nav, main, footer {
     }
 }
 
-.main {
-    padding: 2rem;
+main {
     background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 {
+    color: #0077B6;
 }
 
 .panel, .nested-panel {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     max-height: 0;
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 2rem auto;
+    max-width: 800px; /* Enhances readability */
 }
 
 .accordion-button {
@@ -105,6 +114,7 @@ header, nav, main, footer {
 .site-footer {
     background-color: #333;
     color: #fff;
+    padding: 1.25rem;
     text-align: center;
 }
 
@@ -116,4 +126,8 @@ header, nav, main, footer {
 
 .site-footer a:hover {
     color: #005994;
+}
+
+.site-footer p {
+    margin: 0.625rem 0; 
 }
