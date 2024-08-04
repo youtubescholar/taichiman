@@ -107,36 +107,47 @@
     <section>
         <h2>Available Locations</h2>
         <div class="accordion">
-            <button class="accordion accordion-button" aria-expanded="false">
+            <button class="accordion-button" aria-expanded="false">
                 Studio Name 1 - City Name
             </button>
             <div class="panel">
-                <p><strong>Address:</strong> 123 Main St, City, State</p>
-                <p><strong>Classes Offered:</strong> Tai Chi, Karate</p>
-                <p><strong>Schedule:</strong> Mondays and Wednesdays at 6 PM</p>
-                <p><a href="tel:+1234567890">Call Studio</a></p>
+                <button class="accordion-button nested" aria-expanded="false">Address and Venue Info</button>
+                <div class="panel nested-panel">
+                    <p><strong>Address:</strong> 123 Main St, City, State</p>
+                    <p><strong>Phone:</strong> 123-456-7890</p>
+                </div>
+                <button class="accordion-button nested" aria-expanded="false">Directions</button>
+                <div class="panel nested-panel">
+                    <p>Directions to the studio along with parking information.</p>
+                </div>
+                <button class="accordion-button nested" aria-expanded="false">Class Details</button>
+                <div class="panel nested-panel">
+                    <p><strong>Classes Offered:</strong> Tai Chi, Karate</p>
+                    <p><strong>Schedule:</strong> Mondays and Wednesdays at 6 PM</p>
+                </div>
             </div>
-            <!-- Additional accordion items for other studios -->
         </div>
     </section>
 </main>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    var accordions = document.getElementsByClassName("accordion-button");
-    for (var i = 0; i < accordions.length; i++) {
-        accordions[i].addEventListener("click", function() {
-            this.classList.toggle("active");
+    var accordions = document.querySelectorAll(".accordion-button");
+    accordions.forEach(function(btn) {
+        btn.addEventListener("click", function() {
             var panel = this.nextElementSibling;
+            var isExpanded = this.getAttribute('aria-expanded') === 'true';
+            this.setAttribute('aria-expanded', !isExpanded);
             if (panel.style.maxHeight) {
                 panel.style.maxHeight = null;
             } else {
                 panel.style.maxHeight = panel.scrollHeight + "px";
             }
         });
-    }
+    });
 });
 </script>
+
 
 <footer class="site-footer">
     <p>Contact us at <a href="mailto:taichiman@tutamail.com">taichiman@tutamail.com</a></p>
