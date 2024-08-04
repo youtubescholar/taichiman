@@ -1,3 +1,5 @@
+<script>
+
 document.querySelectorAll('.accordion-button').forEach(button => {
     button.addEventListener('click', () => {
         const accordionContent = button.nextElementSibling;
@@ -5,3 +7,5 @@ document.querySelectorAll('.accordion-button').forEach(button => {
         accordionContent.hidden = !accordionContent.hidden;
     });
 });
+
+</script>
