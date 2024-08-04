@@ -1,11 +1,15 @@
 <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const accordions = document.querySelectorAll('.accordion-button');
+    accordions.forEach(button => {
+        button.addEventListener('click', function() {
+            const expanded = button.getAttribute('aria-expanded') === 'true' || false;
+            const content = document.getElementById(button.getAttribute('aria-controls'));
 
-document.querySelectorAll('.accordion-button').forEach(button => {
-    button.addEventListener('click', () => {
-        const accordionContent = button.nextElementSibling;
-        button.setAttribute('aria-expanded', button.getAttribute('aria-expanded') === 'false' ? 'true' : 'false');
-        accordionContent.hidden = !accordionContent.hidden;
+            // Toggle expanded state
+            button.setAttribute('aria-expanded', !expanded);
+            content.style.display = expanded ? 'none' : 'block'; // Toggle display
+        });
     });
 });
-
 </script>
