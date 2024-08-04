@@ -1,0 +1,29 @@
+.accordion {
+    background-color: #0077B6;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+}
+
+.accordion:hover {
+    background-color: #005fa8;
+}
+
+.panel, .nested-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #f1f1f1;
+}
+
+.nested {
+    background-color: #0096C7; /* Lighter shade for nested items */
+}
+
+.nested-panel {
+    padding-left: 20px; /* Indent nested panels for better hierarchy visualization */
+}
