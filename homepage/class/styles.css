@@ -145,12 +145,11 @@ h1, h2, h3 {
 }
 
 .panel, .nested-panel {
-    padding: 0 18px;
-    background-color: white;
-    max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+    max-height: 0; /* Ensures panel is closed initially */
 }
+
 
 .nested-panel {
     padding-left: 30px; /* Slightly indent nested panels */
