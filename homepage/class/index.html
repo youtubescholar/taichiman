@@ -123,21 +123,27 @@
     </section>
 </main>
 
-	    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const accordions = document.querySelectorAll('.accordion-button');
-        accordions.forEach(button => {
-            button.addEventListener('click', function() {
-                const expanded = button.getAttribute('aria-expanded') === 'true' || false;
-                const content = document.getElementById(button.getAttribute('aria-controls'));
-
-                // Toggle expanded state
-                button.setAttribute('aria-expanded', !expanded);
-                content.style.display = expanded ? 'none' : 'block'; // Toggle display
-            });
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const accordions = document.querySelectorAll('.accordion-button');
+    accordions.forEach(button => {
+        button.addEventListener('click', function() {
+            const content = document.getElementById(button.getAttribute('aria-controls'));
+            const isExpanded = button.getAttribute('aria-expanded') === 'true';
+            
+            // Toggle the 'aria-expanded' attribute
+            button.setAttribute('aria-expanded', !isExpanded);
+            
+            // Toggle visibility of the accordion content
+            if (isExpanded) {
+                content.hidden = true;
+            } else {
+                content.hidden = false;
+            }
         });
     });
-    </script>
+});
+</script>
 
 <footer class="site-footer">
     <p>Contact us at <a href="mailto:taichiman@tutamail.com">taichiman@tutamail.com</a></p>
