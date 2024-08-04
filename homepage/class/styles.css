@@ -2,152 +2,89 @@ body, html {
     height: 100%;
     margin: 0;
     overflow-x: hidden;
-    overflow-y: auto;  /* Ensures the whole page is scrollable */
-}
-
-body {
-    font-family: Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-    margin: 0;
-    padding: 0;
+    overflow-y: auto;
+    font-family: Arial, sans-serif;
     box-sizing: border-box;
-    color: #000; /* Example color, change as needed */
+    color: #000;
 }
 
-p {
-    margin-bottom: 1em; /* Consistent spacing for paragraphs */
+header, nav, main, footer {
+    padding: 0.625em;
 }
 
-/* Header styling STACKBLOCK00 */
 .site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Wraps content on smaller screens */
-    padding: 10px;
     background-color: #000;
     color: #fff;
 }
 
-.left-section, .center-section, .right-section {
-    flex: 1;
-    text-align: center;
-    padding: 5px;
-}
-
-/* Image styling within center section */
-.center-section .images {
-    display: flex;
-    justify-content: center;
-    gap: 10px; /* Space between images */
-    margin-bottom: 10px; /* Margin below images */
-}
-
-.center-section .images img, .center-section > img {
-    width: 120px;
-    height: auto;
-}
-
-/* Navigation styling */
-nav {
-    background-color: #0077B6; /* Bright blue background */
-    padding: 0.625em 1.25em; /* Padding around the nav content */
-}
-
-/* Menu styling */
-.menu {
+.nav, .menu {
     list-style: none;
-    margin: 0;
     padding: 0;
-    background: #333; /* Dark background for the menu */
-    text-align: center;
-    display: none; /* Hidden by default, shown when hamburger is clicked */
+    background-color: #0077B6;
 }
 
 .menu li a {
-    display: inline-block; /* Inline-block for better spacing handling */
-    padding: 0.625em 1.25em; /* Padding for better spacing around text */
-    color: white; /* Text color for readability */
-    text-decoration: none; /* No underline */
-    transition: background-color 0.5s ease, color 0.5s ease, border 0.5s ease; /* Smooth transition for hover effects */
-    border-radius: 50%; /* Smooth rounded corners for circular effect */
-    border: 2px solid transparent; /* Initial border color transparent */
+    display: inline-block;
+    padding: 0.625em 1.25em;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.5s, color 0.5s;
+    border: 2px solid transparent; /* Ensure the border is consistent */
 }
 
-/* Hover and focus states for links */
 .menu li a:hover, .menu li a:focus {
-    background-color: #005f8a; /* Smooth background color change */
-    text-decoration: none; /* No underline for a smoother look */
-    color: #FFD700; /* Bright color for hover state, ADA compliant */
-    border: 2px solid #FFD700; /* Smooth border color change */
-    outline: none; /* Remove outline for better aesthetics */
+    background-color: #005f8a;
+    color: #FFD700;
+    border: 2px solid #FFD700; /* Highlight border on hover */
 }
 
-/* Hamburger icon styling */
 .hamburger {
     display: block;
-    font-size: 1.875em; /* Converted from 30px for better scalability */
     cursor: pointer;
+    background: #333;
+    color: white;
     text-align: center;
-    padding: 0.625em; /* Consistent em unit padding */
-    background: #333; /* Matching menu background */
-    color: white; /* Icon color */
+    padding: 0.625em;
 }
 
-/* Display menu when hamburger is checked */
-input[type="checkbox"]:checked + .hamburger + .menu {
-    display: block;
-}
-
-/* Desktop styles */
 @media (min-width: 768px) {
     .hamburger, #menu-toggle {
         display: none; /* Hide hamburger icon and checkbox on larger screens */
     }
     .menu {
-        display: block;
+        display: flex;
+        justify-content: center;
         background: none;
     }
     .menu li {
         display: inline-block; /* Horizontal menu */
+        border-radius: 50%; /* Circular effect */
     }
     .menu li a {
         padding: 15px;
         border-radius: 50%; /* Consistent border-radius */
-        border: 2px solid transparent; /* Initial border color transparent */
     }
 }
 
-/* Mobile styles */
 @media (max-width: 767px) {
     .menu {
         width: 100%;
+        display: block; /* Ensure mobile menu is accessible */
     }
 }
 
-main {
-    background-color: white;
+.main {
     padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    overflow: visible; /* or auto, if you want scrollbars when content overflows */
-    padding-bottom: 50px; /* Good to keep */
-    max-height: none;
-    height: auto;
-}
-
-main, .panel {
-    max-height: none;
-    overflow: visible;
-}
-
-h1, h2, h3 {
-    color: #0077B6;
+    background-color: white;
 }
 
 .panel, .nested-panel {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    max-height: 0;  /* Ensures panel is closed initially */
+    max-height: 0;
 }
 
 .accordion-button {
@@ -165,15 +102,9 @@ h1, h2, h3 {
     background-color: #005fa8;
 }
 
-
-footer {
-    clear: both;  /* Ensures the footer does not overlap with the content above */
-}
-
 .site-footer {
     background-color: #333;
     color: #fff;
-    padding: 1.25rem;
     text-align: center;
 }
 
@@ -185,8 +116,4 @@ footer {
 
 .site-footer a:hover {
     color: #005994;
-}
-
-.site-footer p {
-    margin: 0.625rem 0; 
 }
