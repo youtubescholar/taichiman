@@ -129,45 +129,38 @@
         </div>
     </div>
 </section>
+
 	
 </main>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    var accordions = document.querySelectorAll(".accordion");
-
+    var accordions = document.querySelectorAll(".accordion-button");
     accordions.forEach(function(button) {
         button.addEventListener("click", function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            var isExpanded = this.getAttribute('aria-expanded') === 'true';
+            const panel = this.nextElementSibling;
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
             this.setAttribute('aria-expanded', !isExpanded);
 
-            if (isExpanded) {
+            // Toggle the panel visibility
+            if (panel.style.maxHeight) {
                 panel.style.maxHeight = null;
             } else {
                 panel.style.maxHeight = panel.scrollHeight + "px";
             }
 
-            // Adjust the parent panel's max-height if this accordion is nested
-            var parentPanel = this.closest('.panel');
-            while (parentPanel) {
+            // Check if this button is nested inside another panel
+            let parentPanel = this.closest('.panel');
+            if (parentPanel) {
                 if (parentPanel.style.maxHeight) {
-                    // Calculate the total height needed by all visible nested panels
-                    var totalHeight = 0;
-                    Array.from(parentPanel.children).forEach(child => {
-                        if (child instanceof HTMLElement) {
-                            totalHeight += child.scrollHeight;
-                        }
-                    });
-                    parentPanel.style.maxHeight = totalHeight + "px";
+                    // Extend the parent panel's max height to fit this panel
+                    parentPanel.style.maxHeight = (parentPanel.scrollHeight + panel.scrollHeight) + "px";
                 }
-                // Move to the next parent panel if it exists (more nesting)
-                parentPanel = parentPanel.parentElement.closest('.panel');
             }
         });
     });
 });
+
 </script>
 
 <footer class="site-footer">
