@@ -12,6 +12,10 @@ header, nav, main, footer {
     padding: 0.625em;
 }
 
+nav {
+    background-color: #0077B6; /* Bright blue background */
+}
+
 .site-header {
     display: flex;
     justify-content: space-between;
