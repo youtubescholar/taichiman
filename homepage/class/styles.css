@@ -144,7 +144,13 @@ h1, h2, h3 {
     color: #0077B6;
 }
 
-.accordion {
+.panel, .nested-panel {
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    max-height: 0;  /* Ensures panel is closed initially */
+}
+
+.accordion-button {
     cursor: pointer;
     background-color: #0077B6;
     color: white;
@@ -155,19 +161,8 @@ h1, h2, h3 {
     outline: none;
 }
 
-.accordion:hover {
+.accordion-button:hover {
     background-color: #005fa8;
-}
-
-.panel, .nested-panel {
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
-    background-color: #f1f1f1;
-    max-height: 0;  /* Ensures panel is closed initially */
-}
-
-.nested-panel {
-    padding-left: 20px; /* Indent nested panels for better hierarchy visualization */
 }
 
 
