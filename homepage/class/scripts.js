@@ -1,17 +1,18 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    var accordions = document.querySelectorAll(".accordion-button");
+    const accordions = document.querySelectorAll(".accordion-button");
     accordions.forEach(function(btn) {
         btn.addEventListener("click", function() {
-            var panel = this.nextElementSibling;
-            var isExpanded = this.getAttribute('aria-expanded') === 'true';
+            const panel = this.nextElementSibling;
+            const isExpanded = this.getAttribute('aria-expanded') === 'true';
             this.setAttribute('aria-expanded', !isExpanded);
-            if (panel.style.maxHeight) {
+            if (isExpanded) {
                 panel.style.maxHeight = null;
             } else {
-                panel.style.maxHeight = panel.scrollHeight + "px";
+                panel.style.maxHeight = panel.scrollHeight + "px"; // Ensure scrollHeight is calculated correctly
             }
         });
     });
 });
+
 </script>
