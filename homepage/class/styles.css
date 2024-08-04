@@ -145,11 +145,12 @@ h1, h2, h3 {
     background-color: #005fa8;
 }
 
-.accordion-content {
-    background-color: #f9f9f9;
-    padding: 15px;
-    display: none; /* Ensure this is initially hidden */
-    border-top: 1px solid #ccc;
+.panel {
+    padding: 0 18px;
+    background-color: white;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
 }
 
 
