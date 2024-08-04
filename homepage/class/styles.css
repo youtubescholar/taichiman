@@ -1,3 +1,10 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    overflow-y: auto;  /* Ensures the whole page is scrollable */
+}
+
 body {
     font-family: Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
     margin: 0;
@@ -161,6 +168,9 @@ h1, h2, h3 {
 }
 
 
+footer {
+    clear: both;  /* Ensures the footer does not overlap with the content above */
+}
 
 .site-footer {
     background-color: #333;
