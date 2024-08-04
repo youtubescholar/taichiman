@@ -123,6 +123,22 @@
     </section>
 </main>
 
+	    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const accordions = document.querySelectorAll('.accordion-button');
+        accordions.forEach(button => {
+            button.addEventListener('click', function() {
+                const expanded = button.getAttribute('aria-expanded') === 'true' || false;
+                const content = document.getElementById(button.getAttribute('aria-controls'));
+
+                // Toggle expanded state
+                button.setAttribute('aria-expanded', !expanded);
+                content.style.display = expanded ? 'none' : 'block'; // Toggle display
+            });
+        });
+    });
+    </script>
+
 <footer class="site-footer">
     <p>Contact us at <a href="mailto:taichiman@tutamail.com">taichiman@tutamail.com</a></p>
     <p>&copy; 2022-present Taichimand's Range</p>
