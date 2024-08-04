@@ -130,14 +130,14 @@ h1, h2, h3 {
 
 
 .accordion-button {
+    cursor: pointer;
     background-color: #0077B6;
     color: white;
     padding: 10px;
+    border: none;
+    display: block;
     width: 100%;
     text-align: left;
-    border: none;
-    outline: none;
-    transition: background-color 0.3s ease;
 }
 
 .accordion-button:hover, .accordion-button:focus {
@@ -145,10 +145,9 @@ h1, h2, h3 {
 }
 
 .accordion-content {
-    background-color: white;
     padding: 10px;
-    display: none; /* Hidden by default, shown when button is clicked */
-    overflow: hidden;
+    background-color: white;
+    display: none; /* Initial state should not hide content via 'display' if using 'hidden' attribute */
 }
 
 
