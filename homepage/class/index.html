@@ -135,8 +135,11 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     var accordions = document.querySelectorAll(".accordion-button");
+    console.log('Total buttons:', accordions.length);  // Check if all buttons are being selected
     accordions.forEach(function(btn) {
+        console.log('Adding listener to:', btn.textContent.trim()); // Check which button is getting listener
         btn.addEventListener("click", function() {
+            console.log('Clicked:', this.textContent.trim()); // Confirm click is registered
             var panel = this.nextElementSibling;
             var isExpanded = this.getAttribute('aria-expanded') === 'true';
             this.setAttribute('aria-expanded', !isExpanded);
@@ -148,6 +151,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
 </script>
 
 
