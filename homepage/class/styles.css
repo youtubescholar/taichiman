@@ -138,19 +138,26 @@ h1, h2, h3 {
     text-align: left;
     cursor: pointer;
     outline: none;
-    transition: background-color 0.3s ease;
 }
 
 .accordion-button:hover {
     background-color: #005fa8;
 }
 
-.panel {
+.panel, .nested-panel {
     padding: 0 18px;
     background-color: white;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
+}
+
+.nested-panel {
+    padding-left: 30px; /* Slightly indent nested panels */
+}
+
+.nested {
+    background-color: #0096C7; /* A lighter shade for nested buttons */
 }
 
 
