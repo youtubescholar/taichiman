@@ -129,7 +129,15 @@ main {
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    padding-bottom: 50px;  /* Adjust this value as needed to give more space at the bottom */
+    overflow: visible; /* or auto, if you want scrollbars when content overflows */
+    padding-bottom: 50px; /* Good to keep */
+    max-height: none;
+    height: auto;
+}
+
+main, .panel {
+    max-height: none;
+    overflow: visible;
 }
 
 h1, h2, h3 {
