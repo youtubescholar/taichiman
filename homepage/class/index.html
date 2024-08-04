@@ -159,20 +159,32 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    const accordions = document.querySelectorAll(".accordion-button");
-    accordions.forEach(function(btn) {
-        btn.addEventListener("click", function() {
+    var accordions = document.querySelectorAll(".accordion-button");
+    accordions.forEach(function(button) {
+        button.addEventListener("click", function() {
             const panel = this.nextElementSibling;
             const isExpanded = this.getAttribute('aria-expanded') === 'true';
             this.setAttribute('aria-expanded', !isExpanded);
-            if (isExpanded) {
+
+            // Toggle the panel visibility
+            if (panel.style.maxHeight) {
                 panel.style.maxHeight = null;
             } else {
-                panel.style.maxHeight = panel.scrollHeight + "px"; // Ensure scrollHeight is calculated correctly
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+
+            // Check if this button is nested inside another panel
+            let parentPanel = this.closest('.panel');
+            if (parentPanel) {
+                if (parentPanel.style.maxHeight) {
+                    // Extend the parent panel's max height to fit this panel
+                    parentPanel.style.maxHeight = (parentPanel.scrollHeight + panel.scrollHeight) + "px";
+                }
             }
         });
     });
 });
+
 
 </script>
 
