@@ -5,29 +5,25 @@ body, html {
     overflow-y: auto;
     font-family: Arial, sans-serif;
     box-sizing: border-box;
-    color: #333; /* Darker text color for better readability */
+    color: #333; /* Improved text color for better readability */
 }
 
 header, nav, main, footer {
     padding: 0.625em;
 }
 
-nav {
-    background-color: #0077B6; /* Bright blue background */
-}
-
 .site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #000;
+    background-color: #0077B6; /* Adjusted to reflect the desired nav color */
     color: #fff;
 }
 
 .nav, .menu {
     list-style: none;
     padding: 0;
-    background-color: #0077B6;
+    background-color: #0077B6; /* Consistent with header */
 }
 
 .menu li a {
@@ -47,7 +43,7 @@ nav {
 .hamburger {
     display: block;
     cursor: pointer;
-    background: #333;
+    background: #333; /* Adjusted for visibility */
     color: white;
     text-align: center;
     padding: 0.625em;
@@ -85,7 +81,7 @@ main {
 }
 
 h1, h2, h3 {
-    color: #0077B6;
+    color: #0077B6; /* Ensure headers have the correct color */
 }
 
 .panel, .nested-panel {
