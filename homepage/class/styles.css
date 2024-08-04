@@ -146,13 +146,13 @@ h1, h2, h3 {
 
 
 .accordion-button {
+    cursor: pointer;
     background-color: #0077B6;
     color: white;
-    padding: 15px;
+    padding: 10px;
     border: none;
     width: 100%;
     text-align: left;
-    cursor: pointer;
     outline: none;
 }
 
@@ -163,7 +163,7 @@ h1, h2, h3 {
 .panel, .nested-panel {
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-    max-height: 0; /* Ensures panel is closed initially */
+    max-height: 0;  /* Ensures panel is closed initially */
 }
 
 
