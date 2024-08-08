@@ -144,13 +144,13 @@
                 <p>Answer: We offer online resources such as videos and written instructions. At this time, there are no online classes.</p>
             </div>
         </div>
-    <div class="faq-item">
-        <button class="accordion nested">How Do I Prepare for My First Class?</button>
-        <div class="panel nested-panel">
-            <p>Answer: For your first class, wear comfortable athletic clothing that allows for a full range of motion. Bring a water bottle to stay hydrated, and remove any jewelry to prevent injuries. Arrive a few minutes early to introduce yourself to the instructor and familiarize yourself with the training area.</p>
-        </div>
+<div class="faq-item">
+    <button class="accordion nested">How Do I Prepare for My First Class?</button>
+    <div class="panel nested-panel">
+        <p>Answer: For your first class, wear comfortable athletic clothing that allows for a full range of motion. Bring a water bottle to stay hydrated, and remove any jewelry to prevent injuries. Arrive a few minutes early to introduce yourself to the instructor and familiarize yourself with the training area.</p>
     </div>
-    </div>
+</div>
+
 	
 </div>
 
@@ -167,9 +167,9 @@ document.addEventListener('DOMContentLoaded', function() {
     function togglePanel(accordion) {
         accordion.classList.toggle("active");
         var panel = accordion.nextElementSibling;
-        // Check if the next sibling is not a panel but contains one
-        if (panel && !panel.classList.contains("panel")) {
-            panel = accordion.parentElement.querySelector(".panel");
+        // This check ensures we are correctly finding the panel even if nested
+        if (!panel || !panel.classList.contains("panel")) {
+            panel = accordion.parentElement.querySelector(".nested-panel");
         }
         if (panel) {
             if (panel.style.maxHeight) {
@@ -179,19 +179,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
-
-    // Optional: Open all accordions function
-    function openAllAccordions() {
-        var allAccordions = document.querySelectorAll(".accordion");
-        allAccordions.forEach(function(accordion) {
-            if (!accordion.classList.contains("active")) {
-                togglePanel(accordion);
-            }
-        });
-    }
-
-    // Call this function if you want all panels open by default
-    // openAllAccordions();
 });
 
 </script>
