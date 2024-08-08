@@ -161,6 +161,10 @@ document.addEventListener('DOMContentLoaded', function() {
         accordions[i].addEventListener("click", function() {
             this.classList.toggle("active");
             var panel = this.nextElementSibling;
+            // Check if the next sibling is not a panel but contains one
+            if (!panel.classList.contains("panel")) {
+                panel = this.parentElement.querySelector(".panel");
+            }
             if (panel.style.maxHeight) {
                 panel.style.maxHeight = null;
             } else {
