@@ -1,0 +1,37 @@
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* Accordion styling */
+.accordion-button, .sub-accordion {
+    background-color: #004A7F;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    transition: background-color 0.4s ease;
+}
+
+.accordion-button:hover, .sub-accordion:hover {
+    background-color: #007BFF;
+}
+
+.panel-content, .sub-panel-content {
+    background-color: #f1f1f1;
+    display: none;
+    overflow: hidden;
+    padding: 10px;
+}
+
+/* Nested panel styling */
+.sub-panel-content {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
