@@ -1,37 +1,71 @@
-/* Basic styling */
+/* General Layout and Typography */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    margin: 0;
     padding: 20px;
+    box-sizing: border-box;
+    color: #333; /* Darker text for better readability */
 }
 
-/* Accordion styling */
+/* Improved paragraph spacing */
+p {
+    margin-bottom: 1em;
+}
+
+/* Accordion Button Styling */
 .accordion-button, .sub-accordion {
     background-color: #004A7F;
     color: white;
     cursor: pointer;
-    padding: 10px;
+    padding: 15px; /* Larger padding for easier targeting */
     width: 100%;
     border: none;
     text-align: left;
     outline: none;
     font-size: 16px;
-    transition: background-color 0.4s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .accordion-button:hover, .sub-accordion:hover {
-    background-color: #007BFF;
+    background-color: #0064AC; /* A lighter shade for hover for better visibility */
+    color: #f1f1f1; /* Changing text color on hover to ensure contrast */
 }
 
+/* Panel Content Styling */
 .panel-content, .sub-panel-content {
     background-color: #f1f1f1;
     display: none;
     overflow: hidden;
     padding: 10px;
+    border-left: 3px solid #004A7F; /* Adding a border for visual cue */
 }
 
-/* Nested panel styling */
+/* Nested Panel Styling */
 .sub-panel-content {
     background-color: #ffffff;
     border: 1px solid #ccc;
     margin-top: 5px;
+}
+
+/* Focus Styles for Accessibility */
+.accordion-button:focus, .sub-accordion:focus {
+    border-color: #005fa8;
+    box-shadow: 0 0 3px 2px rgba(0, 95, 168, 0.75); /* Enhanced focus for keyboard navigation */
+}
+
+/* Responsive Design */
+@media (max-width: 767px) {
+    body {
+        padding: 10px;
+    }
+
+    .accordion-button, .sub-accordion {
+        padding: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+    .accordion-button, .sub-accordion {
+        padding: 20px; /* Larger padding for larger screens */
+    }
 }
