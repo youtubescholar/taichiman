@@ -128,102 +128,6 @@ h1, h2, h3 {
     color: #0077B6;
 }
 
-.learning-background {
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin: 1rem auto;
-}
-
-.timeline {
-    border-left: 4px solid #0077B6;
-    border-radius: 4px;
-    margin-left: 20px;
-    padding: 10px;
-}
-
-.timeline-item {
-    position: relative;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    padding-left: 20px;
-}
-
-.timeline-item:last-child {
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
-
-.timeline-item::before {
-    content: '';
-    background-color: #0077B6;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    position: absolute;
-    left: -7px; /* Half of width to align center with the line */
-    top: 0;
-}
-
-.age-range {
-    font-weight: bold;
-    color: #333;
-}
-
-.martial-art {
-    display: block; /* Makes it go to the next line */
-    margin-top: 5px;
-}
-
-
-.practice-benefit {
-    margin-bottom: 2rem;
-    padding: 1rem;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.practice-benefit h2 {
-    color: #0077B6;
-    margin-bottom: 1rem;
-}
-
-.practice-benefit img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-}
-
-.practice-benefit p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #666;
-}
-
-
-.style-groups {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.style-groups div {
-    flex: 1 1 200px; /* Adjust width as needed */
-    margin-bottom: 1rem;
-}
-
-.style-groups img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-
 .site-footer {
     background-color: #333;
     color: #fff;
@@ -255,6 +159,11 @@ h1, h2, h3 {
 .faq-item {
     margin-bottom: 10px;
     text-align: center;
+}
+
+.faq-category {
+    max-height: none; /* Removes any max-height restriction */
+    overflow: visible; /* Ensures that content can expand outside the box if needed */
 }
 
 .accordion {
