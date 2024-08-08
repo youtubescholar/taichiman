@@ -102,34 +102,36 @@
     </ul>
 </nav>
 
-	  <main>
 
+<main>
     <div class="faq-category">
         <h2>Frequently Asked Questions</h2>
         <button class="accordion">Class Information</button>
         <div class="panel">
-            <!-- Nested accordion for class schedules -->
             <div class="faq-item">
                 <button class="accordion nested">What is the Schedule for Classes?</button>
                 <div class="panel">
                     <p>Classes are scheduled throughout the week. Please check our calendar.</p>
                 </div>
             </div>
-            <!-- More nested accordions as needed -->
+            <!-- Additional nested items could follow the same pattern -->
         </div>
-        <!-- More top-level accordions can go here -->
+        <!-- Additional top-level accordions could follow the same pattern -->
     </div>
-
-
-		  
 </main>
 
+
+
 <script>
-document.addEventListener('DOMContentLoaded', function() {
+
+
+	document.addEventListener('DOMContentLoaded', function() {
     var accordions = document.querySelectorAll(".accordion");
 
     accordions.forEach(accordion => {
-        accordion.addEventListener("click", function() {
+        accordion.addEventListener("click", function(event) {
+            // This stops the event from propagating to parent elements
+            event.stopPropagation();
             this.classList.toggle("active");
             var panel = this.nextElementSibling;
             if (panel.style.maxHeight) {
@@ -141,6 +143,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+	
 </script>
 
   </main>
