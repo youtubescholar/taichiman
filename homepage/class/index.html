@@ -157,40 +157,40 @@
 <script>
 document.addEventListener('DOMContentLoaded', function() {
     var accordions = document.querySelectorAll(".accordion");
-    
-    for (var i = 0; i < accordions.length; i++) {
-        accordions[i].addEventListener("click", function() {
+
+    accordions.forEach(accordion => {
+        accordion.addEventListener("click", function() {
             togglePanel(this);
         });
-    }
-    
+    });
+
     function togglePanel(accordion) {
         accordion.classList.toggle("active");
         var panel = accordion.nextElementSibling;
-        
-        // Adjust for nested panels which do not directly follow the accordion
-        if (!panel.classList.contains("panel")) {
+        // Check if the next sibling is not a panel but contains one
+        if (panel && !panel.classList.contains("panel")) {
             panel = accordion.parentElement.querySelector(".panel");
         }
-        
-        if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-        } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
+        if (panel) {
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
         }
     }
 
-    // Function to open all accordions
+    // Optional: Open all accordions function
     function openAllAccordions() {
         var allAccordions = document.querySelectorAll(".accordion");
         allAccordions.forEach(function(accordion) {
-            if (!accordion.classList.contains("active")) { // check if the accordion is not active
+            if (!accordion.classList.contains("active")) {
                 togglePanel(accordion);
             }
         });
     }
 
-    // Optional: call openAllAccordions here if you want all accordions open by default
+    // Call this function if you want all panels open by default
     // openAllAccordions();
 });
 
