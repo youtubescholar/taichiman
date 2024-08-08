@@ -131,8 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     accordions.forEach(accordion => {
         accordion.addEventListener("click", function(event) {
-            // This stops the event from propagating to parent elements
-            event.stopPropagation();
+            event.stopPropagation(); // Stop the click event from propagating to parent elements
             this.classList.toggle("active");
             var panel = this.nextElementSibling;
             if (panel.style.maxHeight) {
@@ -143,6 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
 
 
 	
