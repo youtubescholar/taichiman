@@ -103,56 +103,26 @@
 </nav>
 
 	  <main>
-<div class="faq-category">
-	<h2>Frequently Asked Questions</h2>
-	<p>This FAQ is designed to provide concise answers to general questions.  Questions and answers are not to be used as an example of evidence-based standards.</p>
-    <button class="accordion">Class Information</button>
-    <div class="panel">
-        <div class="faq-item">
-            <button class="accordion nested">What is the Schedule for Classes?</button>
-            <div class="panel nested-panel">
-                <p>Answer: Click this <a href="https://maburlingtonweb.myvscloud.com/webtrac/web/iteminfo.html?Module=AR&FMID=28882283" style="text-decoration: underline; color: blue;" target="_blank" rel="noopener noreferrer" title="View the weekly class schedule for seasonal availability">link</a> to see the schedule for my seasonal weekly class.</p>
-            </div>
-        </div>
-        <div class="faq-item">
-            <button class="accordion nested">How Do I Sign Up or Register for Classes?</button>
-            <div class="panel nested-panel">
-                <p>Answer: The seasonal class has registration, please use: <a href="https://maburlingtonweb.myvscloud.com/webtrac/web/iteminfo.html?Module=AR&FMID=28882283" style="text-decoration: underline; color: blue;" target="_blank" rel="noopener noreferrer" title="Link To Seasonal Class">Link To Seasonal Class</a>.</p>
-            </div>
-        </div>
-        <div class="faq-item">
-            <button class="accordion nested">What Should I Wear to Class?</button>
-            <div class="panel nested-panel">
-                <p>Answer: Wear comfortable, loose-fitting clothing that allows for a full range of motion, such as athletic wear. Check the <a href="/taichiman/homepage/class">Class</a> page for specific information regarding shoes, uniforms, and specific equipment that is used for each class.</p>
-            </div>
-        </div>
-	     <div class="faq-item">
-            <button class="accordion nested">What Is the Policy on Wearing Jewelry or Accessories During Class?</button>
-            <div class="panel nested-panel">
-                <p>Answer: For safety reasons, it is recommended to remove all jewelry and accessories before class. Items like bracelets, necklaces, and earrings can cause injuries to yourself or others during physical activities. Secure long hair with soft ties and avoid wearing items that could get caught or cause harm.</p>
-            </div>
-        </div>
-        <div class="faq-item">
-            <button class="accordion nested">What is the Class Size?</button>
-            <div class="panel nested-panel">
-                <p>Answer: Class sizes vary but are typically kept small to ensure personalized attention and effective learning.</p>
-            </div>
-        </div>
-        <div class="faq-item">
-            <button class="accordion nested">Are Online Classes Available?</button>
-            <div class="panel nested-panel">
-                <p>Answer: We offer online resources such as videos and written instructions. At this time, there are no online classes.</p>
-            </div>
-        </div>
-<div class="faq-item">
-    <button class="accordion nested">How Do I Prepare for My First Class?</button>
-    <div class="panel nested-panel">
-        <p>Answer: For your first class, wear comfortable athletic clothing that allows for a full range of motion. Bring a water bottle to stay hydrated, and remove any jewelry to prevent injuries. Arrive a few minutes early to introduce yourself to the instructor and familiarize yourself with the training area.</p>
-    </div>
-</div>
 
-	
-</div>
+    <div class="faq-category">
+        <h2>Frequently Asked Questions</h2>
+        <button class="accordion">Class Information</button>
+        <div class="panel">
+            <!-- Nested accordion for class schedules -->
+            <div class="faq-item">
+                <button class="accordion nested">What is the Schedule for Classes?</button>
+                <div class="panel">
+                    <p>Classes are scheduled throughout the week. Please check our calendar.</p>
+                </div>
+            </div>
+            <!-- More nested accordions as needed -->
+        </div>
+        <!-- More top-level accordions can go here -->
+    </div>
+
+
+		  
+</main>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -160,25 +130,15 @@ document.addEventListener('DOMContentLoaded', function() {
 
     accordions.forEach(accordion => {
         accordion.addEventListener("click", function() {
-            togglePanel(this);
-        });
-    });
-
-    function togglePanel(accordion) {
-        accordion.classList.toggle("active");
-        var panel = accordion.nextElementSibling;
-        // This check ensures we are correctly finding the panel even if nested
-        if (!panel || !panel.classList.contains("panel")) {
-            panel = accordion.parentElement.querySelector(".nested-panel");
-        }
-        if (panel) {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
             if (panel.style.maxHeight) {
                 panel.style.maxHeight = null;
             } else {
                 panel.style.maxHeight = panel.scrollHeight + "px";
             }
-        }
-    }
+        });
+    });
 });
 
 </script>
