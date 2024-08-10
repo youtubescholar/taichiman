@@ -1,0 +1,469 @@
+body {
+    font-family: Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #000; /* Example color, change as needed */
+}
+
+p {
+    margin-bottom: 1em; /* Consistent spacing for paragraphs */
+}
+
+/* Header styling STACKBLOCK00 */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Wraps content on smaller screens */
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+}
+
+.left-section, .center-section, .right-section {
+    flex: 1;
+    text-align: center;
+    padding: 5px;
+}
+
+/* Image styling within center section */
+.center-section .images {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* Space between images */
+    margin-bottom: 10px; /* Margin below images */
+}
+
+.center-section .images img, .center-section > img {
+    width: 120px;
+    height: auto;
+}
+
+/* Navigation styling */
+nav {
+    background-color: #0077B6; /* Bright blue background */
+    padding: 0.625em 1.25em; /* Padding around the nav content */
+}
+
+/* Menu styling */
+.menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #333; /* Dark background for the menu */
+    text-align: center;
+    display: none; /* Hidden by default, shown when hamburger is clicked */
+}
+
+.menu li a {
+    display: inline-block; /* Inline-block for better spacing handling */
+    padding: 0.625em 1.25em; /* Padding for better spacing around text */
+    color: white; /* Text color for readability */
+    text-decoration: none; /* No underline */
+    transition: background-color 0.5s ease, color 0.5s ease, border 0.5s ease; /* Smooth transition for hover effects */
+    border-radius: 50%; /* Smooth rounded corners for circular effect */
+    border: 2px solid transparent; /* Initial border color transparent */
+}
+
+/* Hover and focus states for links */
+.menu li a:hover, .menu li a:focus {
+    background-color: #005f8a; /* Smooth background color change */
+    text-decoration: none; /* No underline for a smoother look */
+    color: #FFD700; /* Bright color for hover state, ADA compliant */
+    border: 2px solid #FFD700; /* Smooth border color change */
+    outline: none; /* Remove outline for better aesthetics */
+}
+
+/* Hamburger icon styling */
+.hamburger {
+    display: block;
+    font-size: 1.875em; /* Converted from 30px for better scalability */
+    cursor: pointer;
+    text-align: center;
+    padding: 0.625em; /* Consistent em unit padding */
+    background: #333; /* Matching menu background */
+    color: white; /* Icon color */
+}
+
+/* Display menu when hamburger is checked */
+input[type="checkbox"]:checked + .hamburger + .menu {
+    display: block;
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+    .hamburger, #menu-toggle {
+        display: none; /* Hide hamburger icon and checkbox on larger screens */
+    }
+    .menu {
+        display: block;
+        background: none;
+    }
+    .menu li {
+        display: inline-block; /* Horizontal menu */
+    }
+    .menu li a {
+        padding: 15px;
+        border-radius: 50%; /* Consistent border-radius */
+        border: 2px solid transparent; /* Initial border color transparent */
+    }
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+    .menu {
+        width: 100%;
+    }
+}
+
+main {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h1, h2, h3 {
+    color: #0077B6;
+}
+
+.learning-background {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin: 1rem auto;
+}
+
+.timeline {
+    border-left: 4px solid #0077B6;
+    border-radius: 4px;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.timeline-item::before {
+    content: '';
+    background-color: #0077B6;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: absolute;
+    left: -7px; /* Half of width to align center with the line */
+    top: 0;
+}
+
+.age-range {
+    font-weight: bold;
+    color: #333;
+}
+
+.martial-art {
+    display: block; /* Makes it go to the next line */
+    margin-top: 5px;
+}
+
+
+.practice-benefit {
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.practice-benefit h2 {
+    color: #0077B6;
+    margin-bottom: 1rem;
+}
+
+.practice-benefit img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.practice-benefit p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #666;
+}
+
+
+.style-groups {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.style-groups div {
+    flex: 1 1 200px; /* Adjust width as needed */
+    margin-bottom: 1rem;
+}
+
+.style-groups img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1.25rem;
+    text-align: center;
+}
+
+.site-footer a {
+    color: #0077B6;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.site-footer a:hover {
+    color: #005994;
+}
+
+.site-footer p {
+    margin: 0.625rem 0; 
+}
+
+.faq-section {
+    padding: 20px;
+    background-color: #f8f8f8;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.faq-item {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.accordion {
+    background-color: #0077B6;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+}
+
+.accordion:hover {
+    background-color: #005fa8;
+}
+
+.panel, .nested-panel {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #f1f1f1;
+}
+
+.nested {
+    background-color: #0096C7; /* Lighter shade for nested items */
+}
+
+.nested-panel {
+    padding-left: 20px; /* Indent nested panels for better hierarchy visualization */
+}
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Taichi For Everyone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore the world of Tai Chi Chuan. Embrace Health, Wellness, and Personal Responsibility.">
+    <meta name="keywords" content="tai chi, qigong, chi kung, tai chi chuan, tai ji quan, exercise">
+    <meta name="author" content="Taichiman">
+    <meta http-equiv="Content-Language" content="en">
+    <meta name="robots" content="index, follow">
+    <meta name="color-scheme" content="dark light">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="canonical" href="https://youtubescholar.github.io/taichiman/">
+    <link rel="icon" href="/taichiman/images10/blem/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Social Media and Sharing Metadata -->
+    <meta property="og:title" content="Tai Chi Chuan Range">
+    <meta property="og:description" content="Tai Chi Chuan Range. Embrace Health, Wellness, and Personal Responsibility.">
+    <meta property="og:image" content="https://youtubescholar.github.io/taichiman/images10/og-image.jpg">
+    <meta property="og:url" content="https://youtubescholar.github.io/taichiman/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tai Chi Chuan Range">
+    <meta name="twitter:description" content="Tai Chi Chuan Range. Embrace Health, Wellness, and Personal Responsibility.">
+    <meta name="twitter:image" content="https://youtubescholar.github.io/taichiman/images10/twitter-image.jpg">
+
+    <!-- Performance Optimization -->
+    <link rel="dns-prefetch" href="//youtubescholar.github.io/">
+    <link rel="preconnect" href="https://youtubescholar.github.io/">
+    <link rel="prefetch" href="https://youtubescholar.github.io/taichiman/featured-figure">
+    <link rel="preload" href="styles.css" as="style">
+    <link rel="preload" href="/taichiman/images10/banner.jpg" as="image">
+
+    <!-- Content Security Policy -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' https:">
+
+    <!-- Schema.org Markup for Enhanced Presentation in Search Results -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Taichi For Everyone",
+        "description": "A comprehensive resource on Tai Chi, featuring creative works and content available for general use.",
+        "url": "https://youtubescholar.github.io/taichiman/",
+        "creator": {
+            "@type": "Person",
+            "name": "Taichiman"
+        },
+        "image": "https://youtubescholar.github.io/taichiman/images10/featured-figure.jpg"
+    }
+    </script>
+	
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/taichiman/images10/blem/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/taichiman/images10/blem/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/taichiman/images10/blem/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/taichiman/images10/blem/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/taichiman/images10/blem/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/taichiman/images10/blem/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/taichiman/images10/blem/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/taichiman/images10/blem/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/taichiman/images10/blem/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/taichiman/images10/blem/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/taichiman/images10/blem/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/taichiman/images10/blem/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/taichiman/images10/blem/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="/taichiman/images10/blem/favicon-16x16.png">
+
+    <script src="scripts.js" defer></script>
+    
+</head>
+<body>
+	
+<header class="site-header">
+    <div class="left-section">
+        <p>Flowshop availability? <a href="/taichiman//homepage/flowshop">Details here.</a></p>
+    </div>
+    <div class="center-section">
+
+    </div>
+    <div class="right-section">
+	    <img src="/taichiman/images10/blem/apple-icon-120x120.png" alt="Taijitu" id="taijitu">
+       <span>123taichi</span>
+    </div>
+</header>
+
+<nav aria-label="Main navigation">
+    <input type="checkbox" id="menu-toggle" hidden>
+    <label for="menu-toggle" class="hamburger" aria-label="Toggle menu">&#9776;</label> <!-- Hamburger icon with ARIA label -->
+    <ul class="menu" aria-label="Main menu">
+        <li><a href="/taichiman/homepage/about">About</a></li>
+        <li><a href="/taichiman/homepage/class">Class</a></li>
+        <li><a href="/taichiman/homepage/playbooks">Playbooks</a></li>
+        <li><a href="/taichiman/homepage/faq">FAQ</a></li>
+        <li><a href="/taichiman/homepage/links">Links</a></li> <!-- have the forums and blogs here and locations -->
+        <li><a href="/taichiman/support" target="_blank" rel="noopener noreferrer">Support</a></li>
+        <li><a href="mailto:taichiman@tutamail.com">Contact</a></li>
+        <li><a href="/taichiman/homepage">Home</a></li>
+    </ul>
+</nav>
+
+<div class="faq-category">
+    <button class="accordion">Class Information</button>
+    <div class="panel">
+        <div class="faq-item">
+            <button class="accordion nested">What is the Schedule for Classes?</button>
+            <div class="panel nested-panel">
+                <p>Answer: Click this <a href="https://maburlingtonweb.myvscloud.com/webtrac/web/iteminfo.html?Module=AR&FMID=28882283" style="text-decoration: underline; color: blue;" target="_blank" rel="noopener noreferrer" title="View the weekly class schedule for seasonal availability">link</a> to see the schedule for my seasonal weekly class.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="accordion nested">How Do I Sign Up or Register for Classes?</button>
+            <div class="panel nested-panel">
+                <p>Answer: The seasonal class has registration, please use: <a href="https://maburlingtonweb.myvscloud.com/webtrac/web/iteminfo.html?Module=AR&FMID=28882283" style="text-decoration: underline; color: blue;" target="_blank" rel="noopener noreferrer" title="Link To Seasonal Class">Link To Seasonal Class</a>.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="accordion nested">What Should I Wear to Class?</button>
+            <div class="panel nested-panel">
+                <p>Answer: Wear comfortable, loose-fitting clothing that allows for a full range of motion, such as athletic wear.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="accordion nested">What is the Class Size?</button>
+            <div class="panel nested-panel">
+                <p>Answer: Class sizes vary but are typically kept small to ensure personalized attention and effective learning.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <button class="accordion nested">Are Online Classes Available?</button>
+            <div class="panel nested-panel">
+                <p>Answer: We offer online resources such as videos and written instructions. At this time, there are no online classes.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var accordions = document.querySelectorAll(".accordion");
+    for (var i = 0; i < accordions.length; i++) {
+        accordions[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    }
+});
+</script>
+
+
+<footer class="site-footer">
+    <p>Contact us at <a href="mailto:taichiman@tutamail.com">taichiman@tutamail.com</a></p>
+    <p>&copy; 2022-present Taichimand's Range</p>
+	 <p>&copy; 123taichi</p>
+        <p>
+            <a href="/taichiman/privacy_policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a> | 
+            <a href="/taichiman/terms_of_service" target="_blank" rel="noopener noreferrer">Terms of Service</a>
+        </p>
+        <p>
+            <a href="/taichiman/homepage" target="_blank" rel="noopener noreferrer">Home</a> | 
+            <a href="/taichiman/support" target="_blank" rel="noopener noreferrer">Support</a> |
+	    <a href="/taichiman/homepage/code_conduct" target="_blank" rel="noopener noreferrer">Code of Conduct</a> 
+        </p>
+</footer>
+	
+</body>
+	
+</html>
