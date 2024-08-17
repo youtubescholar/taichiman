@@ -139,8 +139,8 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     overflow: auto; /* Allows scrolling within panels if needed */
     padding: 10px;
     border-left: 3px solid #004A7F;
-    max-height: 0;
-    opacity: 0;
+    max-height: 500px;
+    opacity: 1;
     transition: max-height 0.5s ease, opacity 0.5s ease; /* Slower transition for calming effect */
     position: relative; /* For positioning scroll indicators */
 }
@@ -159,7 +159,6 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     background-color: #005fa8; /* Darker blue for better visibility */
     border-radius: 10px;
     border: 3px solid #f1f1f1; /* White border to make the thumb more prominent */
-    visibility: visible; /* Ensures scrollbar thumb is always visible */
 }
 
 /* Scrollbar styling for Firefox */
