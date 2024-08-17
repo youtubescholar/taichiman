@@ -108,17 +108,19 @@ input[type="checkbox"]:checked + .hamburger + .menu {
 }
 
 .accordion-button:hover, .sub-accordion:hover {
-    background-color: #0064AC; /* A lighter shade for hover for better visibility */
-    color: #f1f1f1; /* Changing text color on hover to ensure contrast */
+    background-color: #0064AC; /* A lighter shade for hover */
+    color: #f1f1f1; /* Changing text color on hover */
 }
 
 /* Panel Content Styling */
 .panel-content, .sub-panel-content {
     background-color: #f1f1f1;
-    display: none;
     overflow: hidden;
     padding: 10px;
-    border-left: 3px solid #004A7F; /* Adding a border for visual cue */
+    border-left: 3px solid #004A7F;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease; /* Slower transition for calming effect */
 }
 
 /* Nested Panel Styling */
@@ -131,9 +133,8 @@ input[type="checkbox"]:checked + .hamburger + .menu {
 /* Focus Styles for Accessibility */
 .accordion-button:focus, .sub-accordion:focus {
     border-color: #005fa8;
-    box-shadow: 0 0 3px 2px rgba(0, 95, 168, 0.75); /* Enhanced focus for keyboard navigation */
+    box-shadow: 0 0 3px 2px rgba(0, 95, 168, 0.75);
 }
-
 
 
 
