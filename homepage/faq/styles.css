@@ -145,6 +145,28 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     position: relative; /* For positioning scroll indicators */
 }
 
+/* Custom scrollbar styling */
+.panel-content::-webkit-scrollbar, .sub-panel-content::-webkit-scrollbar {
+    width: 12px; /* Making the scrollbar wider for easier interaction */
+}
+
+.panel-content::-webkit-scrollbar-track, .sub-panel-content::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Light background for the track */
+    border-radius: 10px;
+}
+
+.panel-content::-webkit-scrollbar-thumb, .sub-panel-content::-webkit-scrollbar-thumb {
+    background-color: #005fa8; /* Darker blue for better visibility */
+    border-radius: 10px;
+    border: 3px solid #f1f1f1; /* White border to make the thumb more prominent */
+}
+
+/* Scrollbar styling for Firefox */
+.panel-content, .sub-panel-content {
+    scrollbar-width: thick;
+    scrollbar-color: #005fa8 #f1f1f1;
+}
+
 /* Nested Panel Styling */
 .sub-panel-content {
     background-color: #ffffff;
@@ -157,36 +179,6 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     border-color: #005fa8;
     box-shadow: 0 0 3px 2px rgba(0, 95, 168, 0.75);
 }
-
-/* Scroll Indicators */
-.panel-content:before, .sub-panel-content:before {
-    content: 'Scroll to view more';
-    position: absolute;
-    top: 5px; /* Adjusted for visibility */
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 12px;
-    background-color: #0077B6;
-    color: white;
-    border-radius: 5px;
-    padding: 5px;
-    opacity: 0.8;
-}
-
-.panel-content:after, .sub-panel-content:after {
-    content: 'More';
-    position: absolute;
-    bottom: 5px; /* Adjusted for visibility */
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 12px;
-    background-color: #0077B6;
-    color: white;
-    border-radius: 5px;
-    padding: 5px;
-    opacity: 0.8;
-}
-
 
 
 
