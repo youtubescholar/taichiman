@@ -98,13 +98,14 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     background-color: #004A7F;
     color: white;
     cursor: pointer;
-    padding: 15px; /* Larger padding for easier targeting */
+    padding: 15px; /* Maintaining larger padding for easier targeting but ensuring box-sizing is set */
     width: 100%;
     border: none;
     text-align: left;
     outline: none;
     font-size: 16px;
     transition: background-color 0.3s ease, color 0.3s ease;
+    box-sizing: border-box; /* Ensures padding and border are included in width and height calculations */
 }
 
 .accordion-button:hover, .sub-accordion:hover {
@@ -115,31 +116,32 @@ input[type="checkbox"]:checked + .hamburger + .menu {
 /* Panel Content Styling */
 .panel-content, .sub-panel-content {
     background-color: #f1f1f1;
-    overflow: hidden;
-    padding: 10px;
-    border-left: 3px solid #004A7F; /* Adding a border for visual cue */
+    overflow: hidden; /* Ensuring no content peeks out */
+    padding: 0; /* Removing padding to prevent content from showing at the edges */
+    border-left: 3px solid #004A7F; /* Maintaining a visual cue */
     max-height: 0;
-    transition: max-height 0.2s ease-out; /* Transition for smooth opening/closing */
+    transition: max-height 0.2s ease-out; /* Smooth transition for opening/closing */
 }
 
 /* Nested Panel Styling */
 .sub-panel-content {
     background-color: #ffffff;
     border: 1px solid #ccc;
-    margin-top: 5px;
+    margin-top: 0; /* Removing margin to prevent accidental content reveal */
     transition: max-height 0.3s ease-out; /* Slightly different timing for nested panels */
 }
 
 /* Focus Styles for Accessibility */
 .accordion-button:focus, .sub-accordion:focus {
     border-color: #005fa8;
-    box-shadow: 0 0 3px 2px rgba(0, 95, 168, 0.75); /* Enhanced focus for keyboard navigation */
+    box-shadow: 0 0 3px 2px rgba(0, 95, 168, 0.75); /* Enhanced focus without expanding the button's size */
 }
 
 /* Additional CSS for expanding the panel content when active */
 .panel-content.active, .sub-panel-content.active {
-    max-height: 500px; /* Example max-height, adjust based on content or dynamically via JavaScript */
+    max-height: 500px; /* Example max-height, can adjust based on content or dynamically via JavaScript */
 }
+
 
 
 /* Responsive Design */
