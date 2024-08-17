@@ -1,13 +1,15 @@
+/* General Layout and Typography */
 body {
     font-family: Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
     margin: 0;
-    padding: 0;
+    padding: 20px;
     box-sizing: border-box;
-    color: #000; /* Example color, change as needed */
+    color: #333; /* Darker text for better readability */
 }
 
+/* Improved paragraph spacing */
 p {
-    margin-bottom: 1em; /* Consistent spacing for paragraphs */
+    margin-bottom: 1em;
 }
 
 /* Header styling STACKBLOCK00 */
@@ -17,7 +19,7 @@ p {
     align-items: center;
     flex-wrap: wrap; /* Wraps content on smaller screens */
     padding: 10px;
-    background-color: #0D0D0D;
+    background-color: #000;
     color: #fff;
 }
 
@@ -91,9 +93,72 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     display: block;
 }
 
-/* Desktop styles */
+/* Accordion Button Styling */
+.accordion-button, .sub-accordion {
+    background-color: #004A7F;
+    color: white;
+    cursor: pointer;
+    padding: 15px; /* Larger padding for easier targeting */
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.accordion-button:hover, .sub-accordion:hover {
+    background-color: #0064AC; /* A lighter shade for hover */
+    color: #f1f1f1; /* Changing text color on hover */
+}
+
+/* Panel Content Styling */
+.panel-content, .sub-panel-content {
+    background-color: #f1f1f1;
+    overflow: hidden;
+    padding: 10px;
+    border-left: 3px solid #004A7F;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease; /* Slower transition for calming effect */
+}
+
+/* Nested Panel Styling */
+.sub-panel-content {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+
+/* Focus Styles for Accessibility */
+.accordion-button:focus, .sub-accordion:focus {
+    border-color: #005fa8;
+    box-shadow: 0 0 3px 2px rgba(0, 95, 168, 0.75);
+}
+
+
+
+
+/* Responsive Design */
+@media (max-width: 767px) {
+      .menu {
+        width: 100%;
+    }
+    body {
+        padding: 10px;
+    }
+
+    .accordion-button, .sub-accordion {
+        padding: 10px;
+    }
+}
+
 @media (min-width: 768px) {
-    .hamburger, #menu-toggle {
+    .accordion-button, .sub-accordion {
+        padding: 20px; /* Larger padding for larger screens */
+    }
+
+      .hamburger, #menu-toggle {
         display: none; /* Hide hamburger icon and checkbox on larger screens */
     }
     .menu {
@@ -108,13 +173,7 @@ input[type="checkbox"]:checked + .hamburger + .menu {
         border-radius: 50%; /* Consistent border-radius */
         border: 2px solid transparent; /* Initial border color transparent */
     }
-}
-
-/* Mobile styles */
-@media (max-width: 767px) {
-    .menu {
-        width: 100%;
-    }
+  
 }
 
 main {
@@ -127,102 +186,6 @@ main {
 h1, h2, h3 {
     color: #0077B6;
 }
-
-.learning-background {
-    background-color: #fff;
-    padding: 1rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    margin: 1rem auto;
-}
-
-.timeline {
-    border-left: 4px solid #0077B6;
-    border-radius: 4px;
-    margin-left: 20px;
-    padding: 10px;
-}
-
-.timeline-item {
-    position: relative;
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    padding-left: 20px;
-}
-
-.timeline-item:last-child {
-    padding-bottom: 0;
-    margin-bottom: 0;
-}
-
-.timeline-item::before {
-    content: '';
-    background-color: #0077B6;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    position: absolute;
-    left: -7px; /* Half of width to align center with the line */
-    top: 0;
-}
-
-.age-range {
-    font-weight: bold;
-    color: #333;
-}
-
-.martial-art {
-    display: block; /* Makes it go to the next line */
-    margin-top: 5px;
-}
-
-
-.practice-benefit {
-    margin-bottom: 2rem;
-    padding: 1rem;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.practice-benefit h2 {
-    color: #0077B6;
-    margin-bottom: 1rem;
-}
-
-.practice-benefit img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 4px;
-    margin-bottom: 1rem;
-}
-
-.practice-benefit p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #666;
-}
-
-
-.style-groups {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
-
-.style-groups div {
-    flex: 1 1 200px; /* Adjust width as needed */
-    margin-bottom: 1rem;
-}
-
-.style-groups img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
 
 .site-footer {
     background-color: #333;
@@ -243,42 +206,4 @@ h1, h2, h3 {
 
 .site-footer p {
     margin: 0.625rem 0; 
-}
-
-.faq-section {
-    padding: 20px;
-    background-color: #f8f8f8;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-.faq-item {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.accordion {
-    background-color: #0077B6;
-    color: #fff;
-    cursor: pointer;
-    padding: 18px;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
-    transition: background-color 0.3s;
-    border-radius: 5px;
-    margin-bottom: 5px;
-}
-
-.accordion:hover, .accordion.active {
-    background-color: #005994;
-}
-
-
-.panel {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.2s ease-out;
-
 }
