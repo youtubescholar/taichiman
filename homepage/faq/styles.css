@@ -119,6 +119,7 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     padding: 10px;
     border-left: 3px solid #004A7F;
     max-height: 0;
+     overflow: auto; /* Allows scrolling within panels if needed */
     opacity: 0;
     transition: max-height 0.5s ease, opacity 0.5s ease; /* Slower transition for calming effect */
 }
