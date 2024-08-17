@@ -160,7 +160,6 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     border-radius: 10px;
     border: 3px solid #f1f1f1; /* White border to make the thumb more prominent */
     visibility: visible; /* Ensures scrollbar thumb is always visible */
-
 }
 
 /* Scrollbar styling for Firefox */
@@ -182,12 +181,9 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     box-shadow: 0 0 3px 2px rgba(0, 95, 168, 0.75);
 }
 
-
-
-
 /* Responsive Design */
 @media (max-width: 767px) {
-      .menu {
+    .menu {
         width: 100%;
     }
     body {
@@ -204,7 +200,7 @@ input[type="checkbox"]:checked + .hamburger + .menu {
         padding: 20px; /* Larger padding for larger screens */
     }
 
-      .hamburger, #menu-toggle {
+    .hamburger, #menu-toggle {
         display: none; /* Hide hamburger icon and checkbox on larger screens */
     }
     .menu {
@@ -219,15 +215,12 @@ input[type="checkbox"]:checked + .hamburger + .menu {
         border-radius: 50%; /* Consistent border-radius */
         border: 2px solid transparent; /* Initial border color transparent */
     }
-  
-}
 
-/* Specific Panel media query for larger screens (tablets and desktops) */
-@media (min-width: 768px) {
+    /* Specific Panel media query for larger screens (tablets and desktops) */
     .panel-content::-webkit-scrollbar, .sub-panel-content::-webkit-scrollbar {
         width: 16px; /* Wider scrollbar for easier interaction on larger screens */
     }
-    
+
     .panel-content::-webkit-scrollbar-thumb, .sub-panel-content::-webkit-scrollbar-thumb {
         border: 4px solid #f1f1f1; /* Adjusting the border thickness for visibility */
     }
@@ -238,6 +231,7 @@ input[type="checkbox"]:checked + .hamburger + .menu {
         scrollbar-color: #005fa8 #f1f1f1;
     }
 }
+
 
 main {
     background-color: white;
