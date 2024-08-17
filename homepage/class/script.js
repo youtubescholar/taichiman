@@ -1,39 +1,18 @@
-// JavaScript for handling main category accordion panels
+
+// Main category panels
 document.querySelectorAll('.accordion-button').forEach(button => {
-    button.setAttribute('aria-expanded', 'false'); // Initialize ARIA attribute
-
-    button.addEventListener('click', function(event) {
-        event.stopPropagation();  // Prevents the event from bubbling up to parent elements
-        const isExpanded = this.getAttribute('aria-expanded') === 'true';
-        this.setAttribute('aria-expanded', !isExpanded);
-        const panelContent = this.nextElementSibling;
-
-        if (isExpanded) {
-            panelContent.style.maxHeight = null; // Close the panel
-            panelContent.classList.remove('active');
-        } else {
-            panelContent.style.maxHeight = panelContent.scrollHeight + "px"; // Open the panel
-            panelContent.classList.add('active');
-        }
+    button.addEventListener('click', function() {
+        this.classList.toggle('active');
+        var panelContent = this.nextElementSibling;
+        panelContent.style.display = panelContent.style.display === 'block' ? 'none' : 'block';
     });
 });
 
-// JavaScript for handling nested accordion panels within each category
+// Nested question panels within each category
 document.querySelectorAll('.sub-accordion').forEach(button => {
-    button.setAttribute('aria-expanded', 'false'); // Initialize ARIA attribute
-
-    button.addEventListener('click', function(event) {
-        event.stopPropagation();  // Prevents the event from bubbling up
-        const isExpanded = this.getAttribute('aria-expanded') === 'true';
-        this.setAttribute('aria-expanded', !isExpanded);
-        const subPanelContent = this.nextElementSibling;
-
-        if (isExpanded) {
-            subPanelContent.style.maxHeight = null; // Close the panel
-            subPanelContent.classList.remove('active');
-        } else {
-            subPanelContent.style.maxHeight = subPanelContent.scrollHeight + "px"; // Open the panel
-            subPanelContent.classList.add('active');
-        }
+    button.addEventListener('click', function() {
+        this.classList.toggle('active');
+        var subPanelContent = this.nextElementSibling;
+        subPanelContent.style.display = subPanelContent.style.display === 'block' ? 'none' : 'block';
     });
 });
