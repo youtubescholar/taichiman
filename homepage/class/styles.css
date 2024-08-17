@@ -93,56 +93,57 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     display: block;
 }
 
-
 /* Accordion Button Styling */
 .accordion-button, .sub-accordion {
     background-color: #004A7F;
     color: white;
     cursor: pointer;
-    padding: 15px; /* Maintaining larger padding for easier targeting */
+    padding: 15px; /* Larger padding for easier targeting */
     width: 100%;
     border: none;
     text-align: left;
     outline: none;
     font-size: 16px;
     transition: background-color 0.3s ease, color 0.3s ease;
-    box-sizing: border-box; /* Ensures padding and border are included in width and height calculations */
+    box-sizing: border-box; /* Includes padding and border in width and height calculations */
 }
 
 .accordion-button:hover, .sub-accordion:hover {
-    background-color: #0064AC; /* A lighter shade for hover for better visibility */
-    color: #f1f1f1; /* Changing text color on hover to ensure contrast */
+    background-color: #0064AC; /* Lighter shade for hover */
+    color: #f1f1f1; /* Enhanced text color on hover */
 }
 
 /* Panel Content Styling */
 .panel-content {
     background-color: #f1f1f1;
-    overflow: hidden; /* Ensuring no content peeks out */
-    padding: 0 0 0 1em; /* Indent panel content to differentiate from the question */
+    overflow: hidden;
+    padding: 0 0 0 1em; /* Indent to differentiate from the question */
     border-left: 3px solid #004A7F;
     max-height: 0;
-    transition: max-height 0.2s ease-out; /* Smooth transition for opening/closing */
+    transition: max-height 0.2s ease-out;
 }
 
 /* Nested Panel Styling */
 .sub-panel-content {
     background-color: #ffffff;
     border: 1px solid #ccc;
-    margin-top: 0; /* Removing margin to prevent accidental content reveal */
-    padding-left: 1em; /* Additional indent for answers within the sub-panels */
-    transition: max-height 0.3s ease-out; /* Slightly different timing for nested panels */
+    margin-top: 0;
+    margin-left: 10px; /* Slight left margin for visual offset */
+    text-indent: -10px; /* Counteract margin for the first line of text */
+    transition: max-height 0.3s ease-out;
 }
 
 /* Focus Styles for Accessibility */
 .accordion-button:focus, .sub-accordion:focus {
     border-color: #005fa8;
-    box-shadow: 0 0 3px 2px rgba(0, 95, 168, 0.75); /* Enhanced focus without expanding the button's size */
+    box-shadow: 0 0 3px 2px rgba(0, 95, 168, 0.75);
 }
 
 /* Additional CSS for expanding the panel content when active */
 .panel-content.active, .sub-panel-content.active {
-    max-height: 500px; /* Example max-height, can adjust based on content or dynamically via JavaScript */
+    max-height: 500px; /* Dynamic adjustment based on content */
 }
+
 
 
 /* Responsive Design */
