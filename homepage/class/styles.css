@@ -115,10 +115,11 @@ input[type="checkbox"]:checked + .hamburger + .menu {
 /* Panel Content Styling */
 .panel-content, .sub-panel-content {
     background-color: #f1f1f1;
-    display: none;
     overflow: hidden;
     padding: 10px;
     border-left: 3px solid #004A7F; /* Adding a border for visual cue */
+    max-height: 0;
+    transition: max-height 0.2s ease-out; /* Transition for smooth opening/closing */
 }
 
 /* Nested Panel Styling */
@@ -126,6 +127,7 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     background-color: #ffffff;
     border: 1px solid #ccc;
     margin-top: 5px;
+    transition: max-height 0.3s ease-out; /* Slightly different timing for nested panels */
 }
 
 /* Focus Styles for Accessibility */
@@ -133,6 +135,12 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     border-color: #005fa8;
     box-shadow: 0 0 3px 2px rgba(0, 95, 168, 0.75); /* Enhanced focus for keyboard navigation */
 }
+
+/* Additional CSS for expanding the panel content when active */
+.panel-content.active, .sub-panel-content.active {
+    max-height: 500px; /* Example max-height, adjust based on content or dynamically via JavaScript */
+}
+
 
 /* Responsive Design */
 @media (max-width: 767px) {
