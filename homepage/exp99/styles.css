@@ -136,22 +136,17 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     max-width: 900px;
     margin: 0 auto 20px;
     border-collapse: collapse;
-    overflow-x: auto;
+    overflow-x: auto; /* Allows horizontal scrolling if necessary, consider removing if not needed */
     -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS devices */
-}
-
-.schedule-table caption {
-    caption-side: top;
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: #333;
+    box-sizing: border-box; /* Ensures padding and borders are included in the width */
 }
 
 .schedule-table th, .schedule-table td {
     border: 1px solid #ddd;
     padding: 12px;
     text-align: center;
-    vertical-align: middle; /* Ensures content stays centered vertically */
+    vertical-align: middle;
+    box-sizing: border-box; /* Ensures padding and borders are included in the element's width */
 }
 
 .schedule-table th {
@@ -400,27 +395,25 @@ body {
     text-align: center;
 }
 
-@media (max-width: 767px) {
-    /* Ensuring the table maintains tabular structure */
+@media (max-width: 767px)  {
     .schedule-table, .schedule-table thead, .schedule-table tbody, .schedule-table th, .schedule-table td {
-        display: table-cell; /* Keeps table elements behaving like a standard table */
+        display: table-cell;
     }
 
     .schedule-table thead {
-        display: table-header-group; /* Keeps the header row visible and formatted correctly */
+        display: table-header-group;
     }
 
     .schedule-table tbody {
-        display: table-row-group; /* Keeps the body behaving like standard table rows */
+        display: table-row-group;
     }
 
     .schedule-table tr {
         display: table-row;
-        margin-bottom: 0; /* Removes the bottom margin to maintain row integrity */
     }
 
     .schedule-table td::before {
-        content: none; /* Removes pseudo-elements that were adding labels inappropriately */
+        content: none; /* Clear the content if added previously */
     }
 }
 
