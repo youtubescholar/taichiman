@@ -397,15 +397,16 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     }
 
     .schedule-table tr {
-        border: 1px solid #ddd; /* Encapsulates each row */
         margin-bottom: 10px; /* Space between rows */
+        border: none; /* Remove border for each row to avoid visual clutter */
     }
 
     .schedule-table td {
-        border: none; /* Removes borders within cells */
+        border-bottom: 1px solid #ddd; /* Adds a bottom border to each cell for clarity */
         position: relative;
         padding-left: 50%; /* Provides space for header content to be shown as label */
-        text-align: right; /* Aligns text to the right for readability */
+        text-align: left; /* Aligns text to the left for readability */
+        min-height: 50px; /* Ensures enough vertical space for content */
     }
 
     .schedule-table td::before {
@@ -418,12 +419,10 @@ input[type="checkbox"]:checked + .hamburger + .menu {
         text-align: left; /* Aligns label text to the left */
         font-weight: bold;
     }
-}
 
-/* Optional: Style adjustments for small screens */
-.schedule-table th, .schedule-table td {
-    text-align: left; /* Ensures text aligns to the left, easier to read */
-}
+    .schedule-table th {
+        display: none; /* Hide table headers on small screens */
+    }
 
 /* Ensures indoor and outdoor classes are easily distinguished */
 .schedule-table .indoor {
