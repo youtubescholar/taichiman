@@ -357,6 +357,7 @@ input[type="checkbox"]:checked + .hamburger + .menu {
         padding: 10px;
     }
 
+  {
     .schedule-table, .schedule-table thead, .schedule-table tbody, .schedule-table th, .schedule-table td {
         display: block; /* Converts table and cells to block for a more linear layout */
     }
@@ -378,17 +379,20 @@ input[type="checkbox"]:checked + .hamburger + .menu {
         padding-left: 50%; /* Provides space for header content to be shown as label */
         text-align: left; /* Aligns text to the left for readability */
         min-height: 50px; /* Ensures enough vertical space for content */
+        padding-top: 20px; /* Adds extra space above the content to avoid overlap with the label */
     }
 
     .schedule-table td::before {
         content: attr(data-label); /* Uses data attributes from thead to label the tds */
         position: absolute;
         left: 10px;
+        top: 0; /* Positions the label at the top of the cell */
         width: 45%; /* Adjusts width of the label */
         padding-right: 10px;
         white-space: nowrap; /* Prevents text from wrapping */
         text-align: left; /* Aligns label text to the left */
         font-weight: bold;
+        background: #fff; /* Ensures label background overlaps text cleanly */
     }
 
     .class-item {
