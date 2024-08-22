@@ -134,7 +134,7 @@ input[type="checkbox"]:checked + .hamburger + .menu {
 .schedule-table {
     width: 100%;
     max-width: 900px;
-    margin: 0 auto 20px;
+    margin: 0 auto;
     border-collapse: collapse;
     overflow-x: auto; /* Allows horizontal scrolling if necessary, consider removing if not needed */
     -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS devices */
@@ -143,10 +143,11 @@ input[type="checkbox"]:checked + .hamburger + .menu {
 
 .schedule-table th, .schedule-table td {
     border: 1px solid #ddd;
-    padding: 12px;
+    padding: 8px; /* Reduced padding might help on smaller screens */
     text-align: center;
     vertical-align: middle;
-    box-sizing: border-box; /* Ensures padding and borders are included in the element's width */
+    min-width: 80px; /* Ensure minimum width for each day column to prevent text wrapping */
+    box-sizing: border-box;
 }
 
 .schedule-table th {
@@ -391,8 +392,7 @@ body {
 
 .schedule-table th, .schedule-table td {
     border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
+    padding: 4px;
 }
 
 @media (max-width: 767px)  {
