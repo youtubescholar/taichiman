@@ -465,7 +465,9 @@ input[type="checkbox"]:checked + .hamburger + .menu {
         margin-right: 15px;
     }
 
-    
+        .site-footer {
+        padding: 1.5rem; /* Slightly larger padding for larger screens */
+    }
 
     /* Specific Panel media query for larger screens (tablets and desktops) */
     .panel-content::-webkit-scrollbar, .sub-panel-content::-webkit-scrollbar {
@@ -496,6 +498,9 @@ h1, h2, h3 {
 }
 
 .site-footer {
+    display: flex;
+    justify-content: center; /* Centers footer content horizontally */
+    align-items: center; /* Centers footer content vertically */
     background-color: #333;
     color: #fff;
     padding: 1.25rem;
