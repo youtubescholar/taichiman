@@ -203,10 +203,14 @@ input[type="checkbox"]:checked + .hamburger + .menu {
 /* Indoor & Outdoor Styles for List Items */
 .class-item.indoor {
     border-left: 5px solid #0056b3; /* Blue for Indoor */
+    background-color: #e0f7fa; /* Light Blue Background for Indoor */
+
 }
 
 .class-item.outdoor {
     border-left: 5px solid #28a745; /* Green for Outdoor */
+    background-color: #e8f5e9; /* Light Green Background for Outdoor */
+
 }
 
 /* Cancellations */
