@@ -106,6 +106,8 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     border: 2px solid #000; /* Increased contrast with a darker border */
     border-radius: 5px;
     font-size: 1.2em; /* Larger font size */
+    text-align: center; /* Centers the text inside the schedule-header */
+
 }
 
 .classes-list {
