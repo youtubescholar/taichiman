@@ -395,25 +395,19 @@ body {
     padding: 4px;
 }
 
-@media (max-width: 767px)  {
-    .schedule-table, .schedule-table thead, .schedule-table tbody, .schedule-table th, .schedule-table td {
-        display: table-cell;
+@media (max-width: 767px) {
+    .schedule-table, .schedule-table thead, .schedule-table tbody, 
+    .schedule-table th, .schedule-table td, .schedule-table tr {
+        display: table; /* Maintains table layout */
     }
-
     .schedule-table thead {
         display: table-header-group;
     }
-
     .schedule-table tbody {
         display: table-row-group;
     }
-
-    .schedule-table tr {
-        display: table-row;
-    }
-
     .schedule-table td::before {
-        content: none; /* Clear the content if added previously */
+        content: none; /* Clears any pseudo-elements if previously used */
     }
 }
 
