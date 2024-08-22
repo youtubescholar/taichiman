@@ -98,7 +98,16 @@ input[type="checkbox"]:checked + .hamburger + .menu {
 
 
 /* Calendar & Class Section */
-.schedule-header, .classes-list {
+.schedule-header {
+    max-width: 900px;
+    margin: 20px auto; /* Add vertical space above and below */
+    padding: 10px 10px 20px 10px; /* Adjust padding as needed */
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.classes-list {
     background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
@@ -186,11 +195,12 @@ input[type="checkbox"]:checked + .hamburger + .menu {
 
 /* Cancellations */
 .not-running {
+    max-width: 900px;
     background-color: #ffe6e6;
-    padding: 15px;
+    padding: 10px 10px 20px 10px; /* Adjust padding as needed */
+    margin: 20px auto; /* Add vertical space above and below */
     border-radius: 8px;
     border-left: 5px solid #ff4d4d;
-    margin-top: 20px;
 }
 
 .not-running p {
