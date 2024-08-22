@@ -1,6 +1,7 @@
 /* General Layout and Typography */
-body {
+body, main {
     font-family: Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+    background-color: white;
     margin: 0;
     padding: 20px;
     box-sizing: border-box;
