@@ -137,6 +137,7 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     margin: 0 auto 20px;
     border-collapse: collapse;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS devices */
 }
 
 .schedule-table caption {
@@ -340,76 +341,103 @@ input[type="checkbox"]:checked + .hamburger + .menu {
 }
 
 /* Responsive Design */
+@media (max-width: 767px) .menu {
+    width: 100%;
+}
+
+body {
+    padding: 10px;
+}
+
+.accordion-button, .sub-accordion {
+    padding: 10px;
+}
+
+.schedule-header, .classes-list {
+    padding: 10px;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto; /* Allows horizontal scrolling on smaller devices */
+}
+
+.schedule-table th, .schedule-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Responsive Design */
 @media (max-width: 767px) {
     .menu {
         width: 100%;
     }
-    body {
-        padding: 10px;
+}
+
+body {
+    padding: 10px;
+}
+
+.accordion-button, .sub-accordion {
+    padding: 10px;
+}
+
+.schedule-header, .classes-list {
+    padding: 10px;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto; /* Allows horizontal scrolling on smaller devices */
+}
+
+.schedule-table th, .schedule-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    /* Ensuring the table maintains tabular structure */
+    .schedule-table, .schedule-table thead, .schedule-table tbody, .schedule-table th, .schedule-table td {
+        display: table-cell; /* Keeps table elements behaving like a standard table */
     }
 
-    .accordion-button, .sub-accordion {
-        padding: 10px;
+    .schedule-table thead {
+        display: table-header-group; /* Keeps the header row visible and formatted correctly */
     }
 
-        .schedule-header, .classes-list {
-        padding: 10px;
-    }
-
-    .schedule-table th, .schedule-table td {
-        padding: 10px;
-    }
-
-        .schedule-table, .schedule-table thead, .schedule-table tbody, .schedule-table th, .schedule-table td {
-        display: block; /* Converts table and cells to block for a more linear layout */
-    }
-
-        .schedule-table thead tr {
-        position: absolute; /* Hide the header row */
-        top: -9999px;
-        left: -9999px;
+    .schedule-table tbody {
+        display: table-row-group; /* Keeps the body behaving like standard table rows */
     }
 
     .schedule-table tr {
-        margin-bottom: 10px; /* Space between rows */
-        border: none; /* Remove border for each row to avoid visual clutter */
-    }
-
-    .schedule-table td {
-        border-bottom: 1px solid #ddd; /* Adds a bottom border to each cell for clarity */
-        position: relative;
-        padding-left: 50%; /* Provides space for header content to be shown as label */
-        text-align: left; /* Aligns text to the left for readability */
-        min-height: 50px; /* Ensures enough vertical space for content */
+        display: table-row;
+        margin-bottom: 0; /* Removes the bottom margin to maintain row integrity */
     }
 
     .schedule-table td::before {
-        content: attr(data-label); /* Uses data attributes from thead to label the tds */
-        position: absolute;
-        left: 10px;
-        width: 45%; /* Adjusts width of the label */
-        padding-right: 10px;
-        white-space: nowrap; /* Prevents text from wrapping */
-        text-align: left; /* Aligns label text to the left */
-        font-weight: bold;
+        content: none; /* Removes pseudo-elements that were adding labels inappropriately */
     }
-
-    .class-item {
-        padding: 10px;
-        flex-direction: column; /* Stack content vertically on smaller screens */
-        align-items: flex-start; /* Align items to the start */
-    }
-    
-    .class-item .icon {
-        margin-bottom: 10px;
-    }
-
-    .not-running {
-        padding: 10px;
-    }
-    
-    
 }
+
+.class-item {
+    padding: 10px;
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    align-items: flex-start; /* Align items to the start */
+}
+
+.class-item .icon {
+    margin-bottom: 10px;
+}
+
+.not-running {
+    padding: 10px;
+}
+
 
 @media (min-width: 768px) {
     .accordion-button, .sub-accordion {
