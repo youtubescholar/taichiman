@@ -121,63 +121,125 @@
         </li>
     </ul>
 
-<!-- Calendar Table with Address Information -->
-<table class="schedule-table" aria-label="Class Schedule">
-    <caption>🗓️:</caption>
-    <thead>
-        <tr>
-            <th scope="col">Time</th>
-            <th scope="col">Monday</th>
-            <th scope="col">Tuesday</th>
-            <th scope="col">Wednesday</th>
-            <th scope="col">Thursday</th>
-            <th scope="col">Friday</th>
-            <th scope="col">Saturday</th>
-            <th scope="col">Sunday</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">2-3 PM</th>
-            <td data-label="Mon" class="indoor">
-                🏢 Tai Chi Basics<br>
-                
-            </td>
-            <td data-label="Tue"></td>
-            <td data-label="Wed" class="outdoor">
-                🌳 Tai Chi Flow<br>
-                
-            </td>
-            <td data-label="Thr"></td>
-            <td data-label="Fri" class="indoor">
-                🏢 Tai Chi Basics<br>
-                
-            </td>
-            <td data-label="Sat" class="outdoor">
-                🌳 Tai Chi Flow<br>
-                
-            </td>
-            <td data-label="Sun"></td>
-        </tr>
-        <tr>
-            <th scope="row">3-4 PM</th>
-            <td data-label="Mon" class="indoor">
-                🏢 Tai Chi Advanced<br>
-                
-            </td>
-            <td data-label="Tue"></td>
-            <td data-label="Wed"></td>
-            <td data-label="Thr" class="outdoor">
-                🌳 Tai Chi Balance<br>
-                
-            </td>
-            <td data-label="Fri"></td>
-            <td data-label="Sat"></td>
-            <td data-label="Sun"></td>
-        </tr>
-        <!-- Add more rows for additional time slots -->
-    </tbody>
-</table>
+    <caption>🗓️:</caption>		
+
+  <!-- Mobile View: Each day as a card -->
+    <div class="mobile-view">
+        <div class="day">
+            <h2>Monday</h2>
+            <p>8:00 AM - 9:00 AM - Yoga</p>
+            <p>10:00 AM - 11:00 AM - Meditation</p>
+            <p>1:00 PM - 2:00 PM - Pilates</p>
+            <p>4:00 PM - 5:00 PM - Kickboxing</p>
+            <p>6:00 PM - 7:00 PM - Zumba</p>
+        </div>
+        <div class="day">
+            <h2>Tuesday</h2>
+            <p>9:00 AM - 10:00 AM - Circuit Training</p>
+            <p>12:00 PM - 1:00 PM - Spin Class</p>
+            <p>5:00 PM - 6:00 PM - Aquarobics</p>
+        </div>
+        <div class="day">
+            <h2>Wednesday</h2>
+            <p>7:00 AM - 8:00 AM - Tai Chi</p>
+            <p>10:00 AM - 11:00 AM - HIIT</p>
+            <p>3:00 PM - 4:00 PM - Ballet Fit</p>
+            <p>6:30 PM - 7:30 PM - Crossfit</p>
+        </div>
+        <div class="day">
+            <h2>Thursday</h2>
+            <p>8:00 AM - 9:00 AM - Body Pump</p>
+            <p>12:00 PM - 1:00 PM - Aerobics</p>
+            <p>6:30 PM - 7:30 PM - Dance Therapy</p>
+        </div>
+        <div class="day">
+            <h2>Friday</h2>
+            <p>7:00 AM - 8:00 AM - Boxing</p>
+            <p>10:00 AM - 11:00 AM - Power Yoga</p>
+            <p>2:00 PM - 3:00 PM - Core Training</p>
+            <p>5:00 PM - 6:00 PM - Vinyasa Yoga</p>
+        </div>
+        <div class="day">
+            <h2>Saturday</h2>
+            <p>9:00 AM - 10:00 AM - Pilates</p>
+            <p>11:00 AM - 12:00 PM - Parkour</p>
+            <p>3:00 PM - 4:00 PM - Strength Training</p>
+        </div>
+        <div class="day">
+            <h2>Sunday</h2>
+            <p>10:00 AM - 11:00 AM - Marathon Training</p>
+            <p>1:00 PM - 2:00 PM - Salsa Dancing</p>
+            <p>4:00 PM - 5:00 PM - Barre Class</p>
+        </div>
+    </div>
+    <!-- Desktop View: Traditional table -->
+    <table class="desktop-view">
+        <thead>
+            <tr>
+                <th>Time</th>
+                <th>Monday</th>
+                <th>Tuesday</th>
+                <th>Wednesday</th>
+                <th>Thursday</th>
+                <th>Friday</th>
+                <th>Saturday</th>
+                <th>Sunday</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>8:00 AM - 9:00 AM</td>
+                <td>Yoga</td>
+                <td>Circuit Training</td>
+                <td>Tai Chi</td>
+                <td>Body Pump</td>
+                <td>Boxing</td>
+                <td>Pilates</td>
+                <td>Marathon Training</td>
+            </tr>
+            <tr>
+                <td>10:00 AM - 11:00 AM</td>
+                <td>Meditation</td>
+                <td></td>
+                <td>HIIT</td>
+                <td></td>
+                <td>Power Yoga</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>1:00 PM - 2:00 PM</td>
+                <td>Pilates</td>
+                <td>Spin Class</td>
+                <td></td>
+                <td></td>
+                <td>Core Training</td>
+                <td></td>
+                <td>Salsa Dancing</td>
+            </tr>
+            <tr>
+                <td>4:00 PM - 5:00 PM</td>
+                <td>Kickboxing</td>
+                <td></td>
+                <td>Ballet Fit</td>
+                <td></td>
+                <td></td>
+                <td>Strength Training</td>
+                <td>Barre Class</td>
+            </tr>
+            <tr>
+                <td>6:00 PM - 7:00 PM</td>
+                <td>Zumba</td>
+                <td>Aquarobics</td>
+                <td>Crossfit</td>
+                <td>Dance Therapy</td>
+                <td>Vinyasa Yoga</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <!-- Add additional rows for other times as needed -->
+        </tbody>
+    </table>
 
 
     <!-- Cancellations or No Classes -->
