@@ -139,6 +139,7 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     max-width: 900px;
     margin: 0 auto 20px;
     border-collapse: collapse;
+    overflow-x: auto;
 }
 
 .schedule-table caption {
@@ -384,6 +385,57 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     
 }
 
+@media (max-width: 768px) {
+    .schedule-table, .schedule-table thead, .schedule-table tbody, .schedule-table th, .schedule-table td {
+        display: block; /* Converts table and cells to block for a more linear layout */
+    }
+
+    .schedule-table thead tr {
+        position: absolute; /* Hide the header row */
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .schedule-table tr {
+        border: 1px solid #ddd; /* Encapsulates each row */
+        margin-bottom: 10px; /* Space between rows */
+    }
+
+    .schedule-table td {
+        border: none; /* Removes borders within cells */
+        position: relative;
+        padding-left: 50%; /* Provides space for header content to be shown as label */
+        text-align: right; /* Aligns text to the right for readability */
+    }
+
+    .schedule-table td::before {
+        content: attr(data-label); /* Uses data attributes from thead to label the tds */
+        position: absolute;
+        left: 10px;
+        width: 45%; /* Adjusts width of the label */
+        padding-right: 10px;
+        white-space: nowrap; /* Prevents text from wrapping */
+        text-align: left; /* Aligns label text to the left */
+        font-weight: bold;
+    }
+}
+
+/* Optional: Style adjustments for small screens */
+.schedule-table th, .schedule-table td {
+    text-align: left; /* Ensures text aligns to the left, easier to read */
+}
+
+/* Ensures indoor and outdoor classes are easily distinguished */
+.schedule-table .indoor {
+    background-color: #cceeff; /* Lighter blue for visibility */
+}
+
+.schedule-table .outdoor {
+    background-color: #ccffcc; /* Lighter green for visibility */
+}
+
+
+
 @media (min-width: 768px) {
     .accordion-button, .sub-accordion {
         padding: 20px; /* Larger padding for larger screens */
@@ -412,6 +464,8 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     .class-item .icon {
         margin-right: 15px;
     }
+
+    
 
     /* Specific Panel media query for larger screens (tablets and desktops) */
     .panel-content::-webkit-scrollbar, .sub-panel-content::-webkit-scrollbar {
