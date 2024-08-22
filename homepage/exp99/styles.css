@@ -131,34 +131,27 @@ input[type="checkbox"]:checked + .hamburger + .menu {
 }
 
 /* Table Layout for Schedule */
-.schedule-table {
+.mobile-view {
+    display: block;  /* Display by default */
+}
+
+.desktop-view {
+    display: none;  /* Hide by default */
     width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
     border-collapse: collapse;
-    overflow-x: auto; /* Allows horizontal scrolling if necessary, consider removing if not needed */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling for iOS devices */
-    box-sizing: border-box; /* Ensures padding and borders are included in the width */
 }
 
-.schedule-table th, .schedule-table td {
+.desktop-view th, .desktop-view td {
     border: 1px solid #ddd;
-    padding: 8px; /* Reduced padding might help on smaller screens */
+    padding: 8px;
     text-align: center;
-    vertical-align: middle;
-    min-width: 80px; /* Ensure minimum width for each day column to prevent text wrapping */
-    box-sizing: border-box;
 }
 
-.schedule-table th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-    color: #333;
-}
-
-.schedule-table td {
-    font-size: 1.1em;
-    color: #222;
+.day {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
 }
 
 .schedule-table .indoor {
@@ -396,18 +389,12 @@ body {
 }
 
 @media (max-width: 767px) {
-    .schedule-table, .schedule-table thead, .schedule-table tbody, 
-    .schedule-table th, .schedule-table td, .schedule-table tr {
-        display: inherit; /* Maintains table layout */
+    .mobile-view {
+        display: none;  /* Hide mobile view on larger screens */
     }
-    .schedule-table thead {
-        display: table-header-group;
-    }
-    .schedule-table tbody {
-        display: table-row-group;
-    }
-    .schedule-table td::before {
-        content: none; /* Clears any pseudo-elements if previously used */
+
+    .desktop-view {
+        display: table;  /* Show desktop view on larger screens */
     }
 }
 
