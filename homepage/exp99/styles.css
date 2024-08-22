@@ -398,7 +398,7 @@ body {
 @media (max-width: 767px) {
     .schedule-table, .schedule-table thead, .schedule-table tbody, 
     .schedule-table th, .schedule-table td, .schedule-table tr {
-        display: table; /* Maintains table layout */
+        display: inherit; /* Maintains table layout */
     }
     .schedule-table thead {
         display: table-header-group;
