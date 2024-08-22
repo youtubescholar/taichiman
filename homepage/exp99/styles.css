@@ -352,19 +352,15 @@ input[type="checkbox"]:checked + .hamburger + .menu {
         padding: 10px;
     }
 
-        .schedule-header, .classes-list {
+    .schedule-header, .classes-list {
         padding: 10px;
     }
 
-    .schedule-table th, .schedule-table td {
-        padding: 10px;
-    }
-
-        .schedule-table, .schedule-table thead, .schedule-table tbody, .schedule-table th, .schedule-table td {
+    .schedule-table, .schedule-table thead, .schedule-table tbody, .schedule-table th, .schedule-table td {
         display: block; /* Converts table and cells to block for a more linear layout */
     }
 
-        .schedule-table thead tr {
+    .schedule-table thead tr {
         position: absolute; /* Hide the header row */
         top: -9999px;
         left: -9999px;
@@ -399,7 +395,7 @@ input[type="checkbox"]:checked + .hamburger + .menu {
         flex-direction: column; /* Stack content vertically on smaller screens */
         align-items: flex-start; /* Align items to the start */
     }
-    
+
     .class-item .icon {
         margin-bottom: 10px;
     }
