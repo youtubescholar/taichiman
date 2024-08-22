@@ -100,19 +100,35 @@ input[type="checkbox"]:checked + .hamburger + .menu {
 /* Calendar & Class Section */
 .schedule-header {
     max-width: 900px;
-    margin: 20px auto; /* Add vertical space above and below */
-    padding: 10px 10px 20px 10px; /* Adjust padding as needed */
+    margin: 20px auto;
+    padding: 20px; /* Increased padding for better spacing */
     background-color: #ffffff;
-    border: 1px solid #ddd;
+    border: 2px solid #000; /* Increased contrast with a darker border */
     border-radius: 5px;
+    font-size: 1.2em; /* Larger font size */
 }
 
 .classes-list {
-    background-color: #ffffff;
+    background-color: #f8f8f8; /* Lighter background to differentiate from white */
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slightly darker shadow for depth perception */
     margin-bottom: 20px;
+    font-size: 1.1em; /* Slightly larger text within list */
+}
+
+.class-item {
+    margin-bottom: 10px; /* More space between items */
+    padding: 10px; /* Padding inside each list item */
+    border: 1px solid #ddd; /* Border to define each item clearly */
+}
+
+.icon {
+    font-size: 1.5em; /* Larger icons */
+}
+
+.class-info {
+    margin-left: 10px; /* Space after the icon */
 }
 
 /* Table Layout for Schedule */
