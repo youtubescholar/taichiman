@@ -1,14 +1,6 @@
 /* General Layout and Typography */
-.body {
+body {
     font-family: Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-    margin: 0;
-    padding: 20px;
-    box-sizing: border-box;
-    color: #333; /* Darker text for better readability */
-}
-
-.main {
-    background-color: white;
     margin: 0;
     padding: 20px;
     box-sizing: border-box;
@@ -100,172 +92,6 @@ nav {
 input[type="checkbox"]:checked + .hamburger + .menu {
     display: block;
 }
-
-
-
-
-
-/* Calendar & Class Section */
-.schedule-header {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px; /* Increased padding for better spacing */
-    background-color: #ffffff;
-    border: 2px solid #000; /* Increased contrast with a darker border */
-    border-radius: 5px;
-    font-size: 1.2em; /* Larger font size */
-    text-align: center; /* Centers the text inside the schedule-header */
-
-}
-
-.classes-list {
-    background-color: #f8f8f8; /* Lighter background to differentiate from white */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slightly darker shadow for depth perception */
-    margin-bottom: 20px;
-    font-size: 1.1em; /* Slightly larger text within list */
-}
-
-.class-item {
-    margin-bottom: 10px; /* More space between items */
-    padding: 10px; /* Padding inside each list item */
-    border: 1px solid #ddd; /* Border to define each item clearly */
-}
-
-.icon {
-    font-size: 1.5em; /* Larger icons */
-}
-
-.class-info {
-    margin-left: 10px; /* Space after the icon */
-}
-
-/* Table Layout for Schedule */
-.schedule-table {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto 20px;
-    border-collapse: collapse;
-    overflow-x: auto;
-}
-
-.schedule-table caption {
-    caption-side: top;
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.schedule-table th, .schedule-table td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: center;
-    vertical-align: middle; /* Ensures content stays centered vertically */
-}
-
-.schedule-table th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-    color: #333;
-}
-
-.schedule-table td {
-    font-size: 1.1em;
-    color: #222;
-}
-
-.schedule-table .indoor {
-    background-color: #e0f7fa;
-}
-
-.schedule-table .outdoor {
-    background-color: #e8f5e9;
-}
-
-/* Class List */
-.classes-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.class-item {
-    display: flex;
-    align-items: center;
-    background-color: #ffffff;
-    margin-bottom: 15px;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-size: 1.2em;
-    color: #222;
-}
-
-.class-item .icon {
-    font-size: 1.5em;
-    margin-right: 15px;
-}
-
-.class-item .class-info {
-    font-size: 1.2em;
-}
-
-/* Indoor & Outdoor Styles for List Items */
-.class-item.indoor {
-    border-left: 5px solid #0056b3; /* Blue for Indoor */
-}
-
-.class-item.outdoor {
-    border-left: 5px solid #28a745; /* Green for Outdoor */
-}
-
-/* Cancellations */
-.not-running {
-    max-width: 900px;
-    background-color: #ffe6e6;
-    padding: 10px 10px 20px 10px; /* Adjust padding as needed */
-    margin: 20px auto; /* Add vertical space above and below */
-    border-radius: 8px;
-    border-left: 5px solid #ff4d4d;
-}
-
-.not-running p {
-    font-size: 1.2em;
-    color: #333;
-}
-
-.cancel-dates {
-    font-weight: bold;
-    color: #d9534f;
-}
-
-/* Legend for Class Locations */
-.legend {
-    max-width: 900px;
-    margin: 20px auto; /* Add vertical space above and below */
-    padding: 10px 10px 20px 10px; /* Adjust padding as needed */
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.legend p {
-    font-size: 1.1em;
-    margin: 5px 0;
-}
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Accordion Button Styling */
 .accordion-button {
@@ -366,82 +192,7 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     .accordion-button, .sub-accordion {
         padding: 10px;
     }
-
-
-        .schedule-header, .classes-list {
-        padding: 10px;
-    }
-
-    .schedule-table th, .schedule-table td {
-        padding: 10px;
-    }
-
-    .class-item {
-        padding: 10px;
-        flex-direction: column; /* Stack content vertically on smaller screens */
-        align-items: flex-start; /* Align items to the start */
-    }
-    
-    .class-item .icon {
-        margin-bottom: 10px;
-    }
-
-    .not-running {
-        padding: 10px;
-    }
-
-    
 }
-
-@media (max-width: 768px) {
-    .schedule-table, .schedule-table thead, .schedule-table tbody, .schedule-table th, .schedule-table td {
-        display: block; /* Converts table and cells to block for a more linear layout */
-    }
-
-    .schedule-table thead tr {
-        position: absolute; /* Hide the header row */
-        top: -9999px;
-        left: -9999px;
-    }
-
-    .schedule-table tr {
-        margin-bottom: 10px; /* Space between rows */
-        border: none; /* Remove border for each row to avoid visual clutter */
-    }
-
-    .schedule-table td {
-        border-bottom: 1px solid #ddd; /* Adds a bottom border to each cell for clarity */
-        position: relative;
-        padding-left: 50%; /* Provides space for header content to be shown as label */
-        text-align: left; /* Aligns text to the left for readability */
-        min-height: 50px; /* Ensures enough vertical space for content */
-    }
-
-    .schedule-table td::before {
-        content: attr(data-label); /* Uses data attributes from thead to label the tds */
-        position: absolute;
-        left: 10px;
-        width: 45%; /* Adjusts width of the label */
-        padding-right: 10px;
-        white-space: nowrap; /* Prevents text from wrapping */
-        text-align: left; /* Aligns label text to the left */
-        font-weight: bold;
-    }
-
-    .schedule-table th {
-        display: none; /* Hide table headers on small screens */
-    }
-
-/* Ensures indoor and outdoor classes are easily distinguished */
-.schedule-table .indoor {
-    background-color: #cceeff; /* Lighter blue for visibility */
-}
-
-.schedule-table .outdoor {
-    background-color: #ccffcc; /* Lighter green for visibility */
-}
-
-
 
 @media (min-width: 768px) {
     .accordion-button, .sub-accordion {
@@ -462,18 +213,6 @@ input[type="checkbox"]:checked + .hamburger + .menu {
         padding: 15px;
         border-radius: 50%; /* Consistent border-radius */
         border: 2px solid transparent; /* Initial border color transparent */
-    }
-
-        .class-item {
-        flex-direction: row; /* Horizontal alignment for larger screens */
-    }
-    
-    .class-item .icon {
-        margin-right: 15px;
-    }
-
-        .site-footer {
-        padding: 1.5rem; /* Slightly larger padding for larger screens */
     }
 
     /* Specific Panel media query for larger screens (tablets and desktops) */
@@ -505,9 +244,6 @@ h1, h2, h3 {
 }
 
 .site-footer {
-    display: flex;
-    justify-content: center; /* Centers footer content horizontally */
-    align-items: center; /* Centers footer content vertically */
     background-color: #333;
     color: #fff;
     padding: 1.25rem;
