@@ -113,13 +113,14 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slightly darker shadow for depth perception */
     margin-bottom: 20px;
-    font-size: 1.5em; /* Slightly larger text within list */
+    font-size: 1.1em; /* Slightly larger text within list */
 }
 
 .class-item {
     margin-bottom: 10px; /* More space between items */
     padding: 10px; /* Padding inside each list item */
     border: 1px solid #ddd; /* Border to define each item clearly */
+    font-size: 1.1em; /* Slightly larger text within list */
 }
 
 .icon {
@@ -128,6 +129,7 @@ input[type="checkbox"]:checked + .hamburger + .menu {
 
 .class-info {
     margin-left: 10px; /* Space after the icon */
+    font-size: 1.1em; /* Slightly larger text within list */
 }
 
 /* Table Layout for Schedule */
