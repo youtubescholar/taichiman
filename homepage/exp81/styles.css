@@ -298,6 +298,22 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     scrollbar-color: #005fa8 #f1f1f1;
 }
 
+/* Custom scrollbar styling */
+.panel-content::-webkit-scrollbar, .sub-panel-content::-webkit-scrollbar {
+    width: 12px; /* Making the scrollbar wider for easier interaction */
+}
+
+.panel-content::-webkit-scrollbar-track, .sub-panel-content::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Light background for the track */
+    border-radius: 10px;
+}
+
+.panel-content::-webkit-scrollbar-thumb, .sub-panel-content::-webkit-scrollbar-thumb {
+    background-color: #005fa8; /* Darker blue for better visibility */
+    border-radius: 10px;
+    border: 3px solid #f1f1f1; /* White border to make the thumb more prominent */
+}
+
 /* Nested Panel Styling */
 .sub-panel-content {
     background-color: #ffffff;
