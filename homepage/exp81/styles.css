@@ -284,13 +284,7 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     position: relative; /* For positioning scroll indicators */
 }
 
-/* Active panel styling */
-.panel-content.active, .sub-panel-content.active {
-    max-height: 500px; /* Adjust as needed */
-    opacity: 1;
-    padding: 10px;
-    overflow: auto;
-}
+
 
 /* Custom scrollbar styling */
 .panel-content::-webkit-scrollbar, .sub-panel-content::-webkit-scrollbar {
@@ -340,6 +334,10 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     .desktop-view {
         display: none;
     }
+
+    .accordion-button, .sub-accordion {
+    padding: 10px;
+}
     
     .class-item {
         padding: 10px;
@@ -384,6 +382,22 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     .desktop-view {
         display: table;  /* Show desktop view on larger screens */
     }
+
+        /* Specific Panel media query for larger screens (tablets and desktops) */
+    .panel-content::-webkit-scrollbar, .sub-panel-content::-webkit-scrollbar {
+        width: 16px; /* Wider scrollbar for easier interaction on larger screens */
+    }
+
+    .panel-content::-webkit-scrollbar-thumb, .sub-panel-content::-webkit-scrollbar-thumb {
+        border: 4px solid #f1f1f1; /* Adjusting the border thickness for visibility */
+    }
+
+    /* Scrollbar styling for Firefox on larger screens */
+    .panel-content, .sub-panel-content {
+        scrollbar-width: thick;
+        scrollbar-color: #005fa8 #f1f1f1;
+    }
+    
 }
 
 /* Main content styling */
