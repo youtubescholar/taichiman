@@ -292,6 +292,12 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     overflow: auto;
 }
 
+/* Scrollbar styling for Firefox */
+.panel-content, .sub-panel-content {
+    scrollbar-width: thick;
+    scrollbar-color: #005fa8 #f1f1f1;
+}
+
 /* Nested Panel Styling */
 .sub-panel-content {
     background-color: #ffffff;
