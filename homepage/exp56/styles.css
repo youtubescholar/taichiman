@@ -98,47 +98,95 @@ input[type="checkbox"]:checked + .hamburger + .menu {
 .schedule-header {
     max-width: 900px;
     margin: 20px auto;
-    padding: 20px; /* Increased padding for better spacing */
-    background-color: #ffffff;
-    border: 2px solid #000; /* Increased contrast with a darker border */
-    border-radius: 5px;
-    font-size: 1.2em; /* Larger font size */
-    text-align: center; /* Centers the text inside the schedule-header */
-
-}
-
-.classes-list {
-    background-color: #f8f8f8; /* Lighter background to differentiate from white */
     padding: 20px;
+    background-color: #ffffff;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/* Legend Styling */
+.legend {
+    max-width: 900px;
+    margin: 20px auto; /* Center the legend */
+    padding: 10px;
+    background-color: #e6f7ff; /* Light blue background */
+    border-left: 5px solid #007BFF; /* Blue left border */
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slightly darker shadow for depth perception */
-    margin-bottom: 20px;
-    font-size: 1.1em; /* Slightly larger text within list */
 }
 
-.class-item {
-    margin-bottom: 10px; /* More space between items */
-    padding: 10px; /* Padding inside each list item */
-    border: 1px solid #ddd; /* Border to define each item clearly */
-    font-size: 1.1em; /* Slightly larger text within list */
+.legend p {
+    font-size: 1.1em;
+    margin: 5px 0;
 }
 
-.icon {
-    font-size: 1.5em; /* Larger icons */
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    color: #333;
 }
 
-.class-info {
-    margin-left: 10px; /* Space after the icon */
-    font-size: 1.1em; /* Slightly larger text within list */
+.legend-icon {
+    margin-right: 10px;
+    font-size: 1.5em;
 }
 
-/* Table Layout for Schedule */
+.legend-item.indoor {
+    color: #007BFF; /* Blue text for indoor */
+}
+
+.legend-item.outdoor {
+    color: #28a745; /* Green text for outdoor */
+}
+
+/* Class Location Icon */
+.class-location {
+    margin-left: 5px;
+    font-size: 1.2em;
+}
+
+/* Mobile View */
 .mobile-view {
-    display: block;  /* Always display on mobile */
+    display: block;
 }
 
+.mobile-view .day {
+    background-color: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.mobile-view h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.mobile-view p {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.class-time {
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.class-time.indoor {
+    background-color: #cce5ff; /* Light blue */
+    color: #000;
+}
+
+.class-time.outdoor {
+    background-color: #d4edda; /* Light green */
+    color: #000;
+}
+
+/* Desktop View */
 .desktop-view {
-    display: none;  /* Hide on mobile by default */
+    display: none;
     width: 100%;
     border-collapse: collapse;
 }
@@ -147,75 +195,30 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     border: 1px solid #ddd;
     padding: 8px;
     text-align: center;
+    vertical-align: top;
 }
 
-.day {
-    background-color: #fff;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
+.desktop-view th {
+    background-color: #f1f1f1;
+    color: #000;
 }
 
-.schedule-header {
-    text-align: center;
-    padding: 20px;
+.desktop-view td.indoor {
+    background-color: #cce5ff;
+    color: #000;
 }
 
-.schedule-table .indoor {
-    background-color: #e0f7fa;
-}
-
-.schedule-table .outdoor {
-    background-color: #e8f5e9;
-}
-
-/* Class List */
-.classes-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.class-item {
-    display: flex;
-    align-items: center;
-    background-color: #ffffff;
-    margin-bottom: 15px;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-size: 1.2em;
-    color: #222;
-}
-
-.class-item .icon {
-    font-size: 1.5em;
-    margin-right: 15px;
-}
-
-.class-item .class-info {
-    font-size: 1.2em;
-}
-
-/* Indoor & Outdoor Styles for List Items */
-.class-item.indoor {
-    border-left: 5px solid #0056b3; /* Blue for Indoor */
-    background-color: #e0f7fa; /* Light Blue Background for Indoor */
-
-}
-
-.class-item.outdoor {
-    border-left: 5px solid #28a745; /* Green for Outdoor */
-    background-color: #e8f5e9; /* Light Green Background for Outdoor */
-
+.desktop-view td.outdoor {
+    background-color: #d4edda;
+    color: #000;
 }
 
 /* Cancellations */
 .not-running {
     max-width: 900px;
     background-color: #ffe6e6;
-    padding: 10px 10px 20px 10px; /* Adjust padding as needed */
-    margin: 20px auto; /* Add vertical space above and below */
+    padding: 10px;
+    margin: 20px auto;
     border-radius: 8px;
     border-left: 5px solid #ff4d4d;
 }
@@ -229,24 +232,6 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     font-weight: bold;
     color: #d9534f;
 }
-
-/* Legend for Class Locations */
-.legend {
-    max-width: 900px;
-    margin: 20px auto; /* Add vertical space above and below */
-    padding: 10px 10px 20px 10px; /* Adjust padding as needed */
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.legend p {
-    font-size: 1.1em;
-    margin: 5px 0;
-}
-
-
-
 
 
 /* Accordion Button Styling */
