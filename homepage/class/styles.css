@@ -326,9 +326,6 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     width: 100%;
 }
 
-body {
-    padding: 10px;
-}
 
 .accordion-button, .sub-accordion {
     padding: 10px;
@@ -357,9 +354,7 @@ body {
     }
 }
 
-body {
-    padding: 10px;
-}
+
 
 .accordion-button, .sub-accordion {
     padding: 10px;
