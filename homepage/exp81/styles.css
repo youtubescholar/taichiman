@@ -1,0 +1,161 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f9f9f9;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 2em;
+    color: #222;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+}
+
+/* Schedule Header */
+.schedule-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.date-range, .season-title {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #222;
+}
+
+.date-range {
+    text-align: left;
+}
+
+.season-title {
+    text-align: right;
+}
+
+/* Class List */
+.classes-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.class-item {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1.2em;
+    color: #222;
+}
+
+.icon {
+    font-size: 1.5em;
+    margin-right: 15px;
+}
+
+.class-info {
+    font-size: 1.2em;
+}
+
+/* Indoor & Outdoor Styles with High Contrast */
+.indoor {
+    border-left: 5px solid #0056b3; /* Blue for Indoor */
+    background-color: #e0f7fa; /* Light Blue Background for Indoor */
+}
+
+.outdoor {
+    border-left: 5px solid #28a745; /* Green for Outdoor */
+    background-color: #e8f5e9; /* Light Green Background for Outdoor */
+}
+
+/* Cancellations */
+.not-running {
+    background-color: #ffe6e6;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 5px solid #ff4d4d;
+    margin-top: 20px;
+}
+
+.not-running p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cancel-dates {
+    font-weight: bold;
+    color: #d9534f;
+}
+
+/* Table for Schedule */
+table {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 20px;
+    border-collapse: collapse;
+}
+
+caption {
+    caption-side: top;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+}
+
+td {
+    font-size: 1.1em;
+    color: #222;
+}
+
+/* Legend */
+.legend {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.legend p {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
