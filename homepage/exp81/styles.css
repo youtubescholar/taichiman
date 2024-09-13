@@ -1,4 +1,4 @@
-/* General Layout and Typography */
+/* General Layout and Typography */ 
 body {
     font-family: Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
     margin: 0;
@@ -12,7 +12,7 @@ p {
     margin-bottom: 1em;
 }
 
-/* Header styling STACKBLOCK00 */
+/* Header styling */
 .site-header {
     display: flex;
     justify-content: space-between;
@@ -93,7 +93,6 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     display: block;
 }
 
-
 /* Calendar & Class Section */
 .schedule-header {
     max-width: 900px;
@@ -108,28 +107,24 @@ input[type="checkbox"]:checked + .hamburger + .menu {
 
 /* Legend Styling */
 .legend {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 20px 0;
+    max-width: 900px;
+    margin: 20px auto; /* Center the legend */
     padding: 10px;
-    background-color: #e0f7fa; /* Light blue background */
-    border-left: 5px solid #0056b3; /* Dark blue left border */
-    border-radius: 5px;
+    background-color: #e6f7ff; /* Light blue background */
+    border-left: 5px solid #007BFF; /* Blue left border */
+    border-radius: 8px;
+}
+
+.legend p {
+    font-size: 1.1em;
+    margin: 5px 0;
 }
 
 .legend-item {
     display: flex;
     align-items: center;
     margin-bottom: 5px;
-}
-
-.legend .indoor {
-    color: #0056b3; /* Dark blue text */
-}
-
-.legend .outdoor {
-    color: #28a745; /* Dark green text */
+    color: #333;
 }
 
 .legend-icon {
@@ -137,13 +132,12 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     font-size: 1.5em;
 }
 
-.classes-list {
-    background-color: #f8f8f8; /* Lighter background to differentiate from white */
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Slightly darker shadow for depth perception */
-    margin-bottom: 20px;
-    font-size: 1.1em; /* Slightly larger text within list */
+.legend-item.indoor {
+    color: #007BFF; /* Blue text for indoor */
+}
+
+.legend-item.outdoor {
+    color: #28a745; /* Green text for outdoor */
 }
 
 /* Class Location Icon */
@@ -152,24 +146,7 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     font-size: 1.2em;
 }
 
-.class-item {
-    margin-bottom: 10px; /* More space between items */
-    padding: 10px; /* Padding inside each list item */
-    border: 1px solid #ddd; /* Border to define each item clearly */
-    font-size: 1.1em; /* Slightly larger text within list */
-}
-
-.icon {
-    font-size: 1.5em; /* Larger icons */
-}
-
-.class-info {
-    margin-left: 10px; /* Space after the icon */
-    font-size: 1.1em; /* Slightly larger text within list */
-}
-
-/* Table Layout for Schedule */
-* Mobile View */
+/* Mobile View */
 .mobile-view {
     display: block;
 }
@@ -234,66 +211,6 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     background-color: #d4edda;
     color: #000;
 }
-.day {
-    background-color: #fff;
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ddd;
-}
-
-.schedule-header {
-    text-align: center;
-    padding: 20px;
-}
-
-.schedule-table .indoor {
-    background-color: #e0f7fa;
-}
-
-.schedule-table .outdoor {
-    background-color: #e8f5e9;
-}
-
-/* Class List */
-.classes-list {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-.class-item {
-    display: flex;
-    align-items: center;
-    background-color: #ffffff;
-    margin-bottom: 15px;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    font-size: 1.2em;
-    color: #222;
-}
-
-.class-item .icon {
-    font-size: 1.5em;
-    margin-right: 15px;
-}
-
-.class-item .class-info {
-    font-size: 1.2em;
-}
-
-/* Indoor & Outdoor Styles for List Items */
-.class-item.indoor {
-    border-left: 5px solid #0056b3; /* Blue for Indoor */
-    background-color: #e0f7fa; /* Light Blue Background for Indoor */
-
-}
-
-.class-item.outdoor {
-    border-left: 5px solid #28a745; /* Green for Outdoor */
-    background-color: #e8f5e9; /* Light Green Background for Outdoor */
-
-}
 
 /* Cancellations */
 .not-running {
@@ -314,25 +231,6 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     font-weight: bold;
     color: #d9534f;
 }
-
-/* Legend for Class Locations */
-.legend {
-    max-width: 900px;
-    margin: 20px auto; /* Add vertical space above and below */
-    padding: 10px 10px 20px 10px; /* Adjust padding as needed */
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-.legend p {
-    font-size: 1.1em;
-    margin: 5px 0;
-}
-
-
-
-
 
 /* Accordion Button Styling */
 .accordion-button {
@@ -377,8 +275,8 @@ input[type="checkbox"]:checked + .hamburger + .menu {
 /* Panel Content Styling */
 .panel-content, .sub-panel-content {
     background-color: #f1f1f1;
-    overflow: auto; /* Allows scrolling within panels if needed */
-    padding: 10px;
+    overflow: hidden;
+    padding: 0 10px;
     border-left: 3px solid #004A7F;
     max-height: 0;
     opacity: 0;
@@ -386,26 +284,12 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     position: relative; /* For positioning scroll indicators */
 }
 
-/* Custom scrollbar styling */
-.panel-content::-webkit-scrollbar, .sub-panel-content::-webkit-scrollbar {
-    width: 12px; /* Making the scrollbar wider for easier interaction */
-}
-
-.panel-content::-webkit-scrollbar-track, .sub-panel-content::-webkit-scrollbar-track {
-    background-color: #f1f1f1; /* Light background for the track */
-    border-radius: 10px;
-}
-
-.panel-content::-webkit-scrollbar-thumb, .sub-panel-content::-webkit-scrollbar-thumb {
-    background-color: #005fa8; /* Darker blue for better visibility */
-    border-radius: 10px;
-    border: 3px solid #f1f1f1; /* White border to make the thumb more prominent */
-}
-
-/* Scrollbar styling for Firefox */
-.panel-content, .sub-panel-content {
-    scrollbar-width: thick;
-    scrollbar-color: #005fa8 #f1f1f1;
+/* Active panel styling */
+.panel-content.active, .sub-panel-content.active {
+    max-height: 500px; /* Adjust as needed */
+    opacity: 1;
+    padding: 10px;
+    overflow: auto;
 }
 
 /* Nested Panel Styling */
@@ -422,81 +306,33 @@ input[type="checkbox"]:checked + .hamburger + .menu {
 }
 
 /* Responsive Design */
-@media (max-width: 767px) .menu {
-    width: 100%;
-}
-
-body {
-    padding: 10px;
-}
-
-.accordion-button, .sub-accordion {
-    padding: 10px;
-}
-
-.schedule-header, .classes-list {
-    padding: 10px;
-}
-
-.schedule-table {
-    width: 100%;
-    border-collapse: collapse;
-    overflow-x: auto; /* Allows horizontal scrolling on smaller devices */
-}
-
-.schedule-table th, .schedule-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-    text-align: center;
-}
-
-/* Responsive Design */
 @media (max-width: 767px) {
     .menu {
         width: 100%;
     }
-}
-
-body {
-    padding: 10px;
-}
-
-.accordion-button, .sub-accordion {
-    padding: 10px;
-}
-
-.schedule-header, .classes-list {
-    padding: 10px;
-}
-
-.schedule-table {
-    width: 100%;
-    border-collapse: collapse;
-    overflow-x: auto; /* Allows horizontal scrolling on smaller devices */
-}
-
-.schedule-table th, .schedule-table td {
-    border: 1px solid #ddd;
-    padding: 4px;
-}
-
-@media (max-width: 767px) {
-.class-item {
-    padding: 10px;
-    flex-direction: column; /* Stack content vertically on smaller screens */
-    align-items: flex-start; /* Align items to the start */
-}
-
-.class-item .icon {
-    margin-bottom: 10px;
-}
-
-.not-running {
-    padding: 10px;
-}
-
-}
     
+    .mobile-view {
+        display: block;
+    }
+    
+    .desktop-view {
+        display: none;
+    }
+    
+    .class-item {
+        padding: 10px;
+        flex-direction: column; /* Stack content vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+    
+    .class-item .icon {
+        margin-bottom: 10px;
+    }
+    
+    .not-running {
+        padding: 10px;
+    }
+}
 
 @media (min-width: 768px) {
     .accordion-button, .sub-accordion {
@@ -519,31 +355,16 @@ body {
         border: 2px solid transparent; /* Initial border color transparent */
     }
 
-        .mobile-view {
+    .mobile-view {
         display: none;  /* Hide mobile view on larger screens */
     }
 
     .desktop-view {
         display: table;  /* Show desktop view on larger screens */
     }
-
-    /* Specific Panel media query for larger screens (tablets and desktops) */
-    .panel-content::-webkit-scrollbar, .sub-panel-content::-webkit-scrollbar {
-        width: 16px; /* Wider scrollbar for easier interaction on larger screens */
-    }
-
-    .panel-content::-webkit-scrollbar-thumb, .sub-panel-content::-webkit-scrollbar-thumb {
-        border: 4px solid #f1f1f1; /* Adjusting the border thickness for visibility */
-    }
-
-    /* Scrollbar styling for Firefox on larger screens */
-    .panel-content, .sub-panel-content {
-        scrollbar-width: thick;
-        scrollbar-color: #005fa8 #f1f1f1;
-    }
 }
 
-
+/* Main content styling */
 main {
     background-color: white;
     padding: 2rem;
