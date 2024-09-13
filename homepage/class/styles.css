@@ -2,7 +2,7 @@
 body {
     font-family: Arial, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
     margin: 0;
-    padding: 20px;
+
     box-sizing: border-box;
     color: #333; /* Darker text for better readability */
 }
@@ -19,7 +19,7 @@ p {
     align-items: center;
     flex-wrap: wrap; /* Wraps content on smaller screens */
     padding: 10px;
-    background-color: #000;
+    background-color: #0D0D0D;
     color: #fff;
 }
 
@@ -93,9 +93,150 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     display: block;
 }
 
+
+/* Calendar & Class Section */
+.schedule-header {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 2px solid #000;
+    border-radius: 5px;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+/* Legend Styling */
+.legend {
+    max-width: 900px;
+    margin: 20px auto; /* Center the legend */
+    padding: 10px;
+    background-color: #e6f7ff; /* Light blue background */
+    border-left: 5px solid #007BFF; /* Blue left border */
+    border-radius: 8px;
+}
+
+.legend p {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.legend-icon {
+    margin-right: 10px;
+    font-size: 1.5em;
+}
+
+.legend-item.indoor {
+    color: #007BFF; /* Blue text for indoor */
+}
+
+.legend-item.outdoor {
+    color: #28a745; /* Green text for outdoor */
+}
+
+/* Class Location Icon */
+.class-location {
+    margin-left: 5px;
+    font-size: 1.2em;
+}
+
+/* Mobile View */
+.mobile-view {
+    display: block;
+}
+
+.mobile-view .day {
+    background-color: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.mobile-view h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.mobile-view p {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.class-time {
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.class-time.indoor {
+    background-color: #cce5ff; /* Light blue */
+    color: #000;
+}
+
+.class-time.outdoor {
+    background-color: #d4edda; /* Light green */
+    color: #000;
+}
+
+/* Desktop View */
+.desktop-view {
+    display: none;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.desktop-view th, .desktop-view td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+    vertical-align: top;
+}
+
+.desktop-view th {
+    background-color: #f1f1f1;
+    color: #000;
+}
+
+.desktop-view td.indoor {
+    background-color: #cce5ff;
+    color: #000;
+}
+
+.desktop-view td.outdoor {
+    background-color: #d4edda;
+    color: #000;
+}
+
+/* Cancellations */
+.not-running {
+    max-width: 900px;
+    background-color: #ffe6e6;
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 8px;
+    border-left: 5px solid #ff4d4d;
+}
+
+.not-running p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+.cancel-dates {
+    font-weight: bold;
+    color: #d9534f;
+}
+
+
 /* Accordion Button Styling */
-.accordion-button, .sub-accordion {
-    background-color: #004A7F;
+.accordion-button {
+    background-color: #004A7F; /* Dark blue for main accordion buttons */
     color: white;
     cursor: pointer;
     padding: 15px; /* Larger padding for easier targeting */
@@ -107,20 +248,64 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.accordion-button:hover, .sub-accordion:hover {
+/* Hover effect for main accordion buttons */
+.accordion-button:hover {
     background-color: #0064AC; /* A lighter shade for hover */
     color: #f1f1f1; /* Changing text color on hover */
+}
+
+/* Nested Accordion Button Styling */
+.sub-accordion {
+    background-color: #005fa8; /* Slightly lighter than the main button */
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect for nested accordion buttons */
+.sub-accordion:hover {
+    background-color: #007bca; /* Even lighter shade for hover */
+    color: #f1f1f1;
 }
 
 /* Panel Content Styling */
 .panel-content, .sub-panel-content {
     background-color: #f1f1f1;
-    overflow: hidden;
+    overflow: auto; /* Allows scrolling within panels if needed */
     padding: 10px;
     border-left: 3px solid #004A7F;
     max-height: 0;
     opacity: 0;
     transition: max-height 0.5s ease, opacity 0.5s ease; /* Slower transition for calming effect */
+    position: relative; /* For positioning scroll indicators */
+}
+
+/* Custom scrollbar styling */
+.panel-content::-webkit-scrollbar, .sub-panel-content::-webkit-scrollbar {
+    width: 12px; /* Making the scrollbar wider for easier interaction */
+}
+
+.panel-content::-webkit-scrollbar-track, .sub-panel-content::-webkit-scrollbar-track {
+    background-color: #f1f1f1; /* Light background for the track */
+    border-radius: 10px;
+}
+
+.panel-content::-webkit-scrollbar-thumb, .sub-panel-content::-webkit-scrollbar-thumb {
+    background-color: #005fa8; /* Darker blue for better visibility */
+    border-radius: 10px;
+    border: 3px solid #f1f1f1; /* White border to make the thumb more prominent */
+}
+
+/* Scrollbar styling for Firefox */
+.panel-content, .sub-panel-content {
+    scrollbar-width: thick;
+    scrollbar-color: #005fa8 #f1f1f1;
 }
 
 /* Nested Panel Styling */
@@ -136,29 +321,89 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     box-shadow: 0 0 3px 2px rgba(0, 95, 168, 0.75);
 }
 
+/* Responsive Design */
+@media (max-width: 767px) .menu {
+    width: 100%;
+}
 
+body {
+    padding: 10px;
+}
 
+.accordion-button, .sub-accordion {
+    padding: 10px;
+}
+
+.schedule-header, .classes-list {
+    padding: 10px;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto; /* Allows horizontal scrolling on smaller devices */
+}
+
+.schedule-table th, .schedule-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
 
 /* Responsive Design */
 @media (max-width: 767px) {
-      .menu {
+    .menu {
         width: 100%;
     }
-    body {
-        padding: 10px;
-    }
-
-    .accordion-button, .sub-accordion {
-        padding: 10px;
-    }
 }
+
+body {
+    padding: 10px;
+}
+
+.accordion-button, .sub-accordion {
+    padding: 10px;
+}
+
+.schedule-header, .classes-list {
+    padding: 10px;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow-x: auto; /* Allows horizontal scrolling on smaller devices */
+}
+
+.schedule-table th, .schedule-table td {
+    border: 1px solid #ddd;
+    padding: 4px;
+}
+
+@media (max-width: 767px) {
+.class-item {
+    padding: 10px;
+    flex-direction: column; /* Stack content vertically on smaller screens */
+    align-items: flex-start; /* Align items to the start */
+}
+
+.class-item .icon {
+    margin-bottom: 10px;
+}
+
+.not-running {
+    padding: 10px;
+}
+
+}
+    
 
 @media (min-width: 768px) {
     .accordion-button, .sub-accordion {
         padding: 20px; /* Larger padding for larger screens */
     }
 
-      .hamburger, #menu-toggle {
+    .hamburger, #menu-toggle {
         display: none; /* Hide hamburger icon and checkbox on larger screens */
     }
     .menu {
@@ -173,8 +418,31 @@ input[type="checkbox"]:checked + .hamburger + .menu {
         border-radius: 50%; /* Consistent border-radius */
         border: 2px solid transparent; /* Initial border color transparent */
     }
-  
+
+        .mobile-view {
+        display: none;  /* Hide mobile view on larger screens */
+    }
+
+    .desktop-view {
+        display: table;  /* Show desktop view on larger screens */
+    }
+
+    /* Specific Panel media query for larger screens (tablets and desktops) */
+    .panel-content::-webkit-scrollbar, .sub-panel-content::-webkit-scrollbar {
+        width: 16px; /* Wider scrollbar for easier interaction on larger screens */
+    }
+
+    .panel-content::-webkit-scrollbar-thumb, .sub-panel-content::-webkit-scrollbar-thumb {
+        border: 4px solid #f1f1f1; /* Adjusting the border thickness for visibility */
+    }
+
+    /* Scrollbar styling for Firefox on larger screens */
+    .panel-content, .sub-panel-content {
+        scrollbar-width: thick;
+        scrollbar-color: #005fa8 #f1f1f1;
+    }
 }
+
 
 main {
     background-color: white;
