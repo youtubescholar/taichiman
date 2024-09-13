@@ -1,4 +1,3 @@
-// Main category panels
 document.querySelectorAll('.accordion-button').forEach(button => {
     button.addEventListener('click', function() {
         var panelContent = this.nextElementSibling;
@@ -12,7 +11,6 @@ document.querySelectorAll('.accordion-button').forEach(button => {
     });
 });
 
-// Nested question panels within each category
 document.querySelectorAll('.sub-accordion').forEach(button => {
     button.addEventListener('click', function() {
         var subPanelContent = this.nextElementSibling;
@@ -20,7 +18,11 @@ document.querySelectorAll('.sub-accordion').forEach(button => {
             subPanelContent.style.maxHeight = null;
             subPanelContent.style.opacity = 0;
         } else {
-            subPanelContent.style.maxHeight = subPanelContent.scrollHeight + "px";
+            // Calculate total maximum height considering other open sub-panels
+            let totalHeight = Array.from(button.parentNode.parentNode.querySelectorAll('.sub-panel-content'))
+                .filter(panel => panel !== subPanelContent && panel.style.maxHeight)
+                .reduce((total, panel) => total + panel.scrollHeight, subPanelContent.scrollHeight);
+            subPanelContent.style.maxHeight = totalHeight + "px";
             subPanelContent.style.opacity = 1;
         }
     });
