@@ -284,13 +284,15 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     opacity: 0;
     transition: max-height 0.5s ease, opacity 0.5s ease; /* Slower transition for calming effect */
     position: relative; /* For positioning scroll indicators */
+     display: none; /* Ensure panels are hidden by default */ 
+
 }
 
 /* When the panel is active (expanded) */
 .panel-content.expanded, .sub-panel-content.expanded {
-    max-height: 1000px; /* Large value for full expansion */
-    opacity: 1;
-    overflow: auto; /* Allows scrolling if content is larger */
+    display: block; /* Display the panel when expanded */ 
+    max-height: none; /* Remove height limitation to fully expand based on content */ 
+    opacity: 1; /* Make it visible */ 
 }
 
 /* Custom scrollbar styling */
