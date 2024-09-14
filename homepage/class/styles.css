@@ -286,6 +286,13 @@ input[type="checkbox"]:checked + .hamburger + .menu {
     position: relative; /* For positioning scroll indicators */
 }
 
+/* When the panel is active (expanded) */
+.panel-content.expanded, .sub-panel-content.expanded {
+    max-height: 1000px; /* Large value for full expansion */
+    opacity: 1;
+    overflow: auto; /* Allows scrolling if content is larger */
+}
+
 /* Custom scrollbar styling */
 .panel-content::-webkit-scrollbar, .sub-panel-content::-webkit-scrollbar {
     width: 12px; /* Making the scrollbar wider for easier interaction */
