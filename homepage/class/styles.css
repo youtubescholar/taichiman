@@ -290,9 +290,10 @@ input[type="checkbox"]:checked + .hamburger + .menu {
 
 /* When the panel is active (expanded) */
 .panel-content.expanded, .sub-panel-content.expanded {
-    display: block; /* Display the panel when expanded */ 
-    max-height: none; /* Remove height limitation to fully expand based on content */ 
-    opacity: 1; /* Make it visible */ 
+    display: block; /*Display the panel when expanded */
+    max-height: 100vh; /*  Expands fully to the viewport height */
+    opacity: 1; /*Makes it visible */
+    transition: max-height 0.5s ease, opacity 0.5s ease; /*Smooth transition */
 }
 
 /* Custom scrollbar styling */
