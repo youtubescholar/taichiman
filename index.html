@@ -115,24 +115,7 @@
                 <button onclick="declineDisclaimer()" style="background-color: #f44336;">Decline Disclaimer</button>
             </div>
         </div>
-        <script>
-        function acceptDisclaimer() {
-            document.getElementById("disclaimerModal").style.display = "none";
-            // Additional code to handle acceptance
-        }
-
-        function declineDisclaimer() {
-            // Handle the decline action, such as redirecting to a different page
-            window.location.href = '/taichiman/declined/';
-        }
-		
-		function acceptDisclaimer() {
-    // Set a cookie/sessionStorage item
-    sessionStorage.setItem('disclaimerAccepted', 'true');
-
-    // Hide the disclaimer modal
-    document.getElementById("disclaimerModal").style.display = "none";
-}    </script>
+       
 
     </section>
 
@@ -177,7 +160,7 @@
 	    <a href="/taichiman/homepage/code_conduct" target="_blank" rel="noopener noreferrer">Code of Conduct</a> 
         </p>
     </footer>
-	<script src="/taichiman/script.js" defer></script>
+<script src="/taichiman/scripts.js" defer></script>
 
 </body>
 </html>
