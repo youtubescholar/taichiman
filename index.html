@@ -73,17 +73,6 @@
     <meta http-equiv="X-Download-Options" content="noopen">
     <meta http-equiv="Permissions-Policy" content="geolocation 'self'; camera 'none'; microphone 'none'; fullscreen 'self'; payment 'self'">
 
-    <!-- Service Worker for Offline Support -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-                console.log('Service Worker registered with scope:', registration.scope);
-            }).catch(function(error) {
-                console.log('Service Worker registration failed:', error);
-            });
-        }
-    </script>
-
     <!-- Schema.org Markup for SEO -->
     <script type="application/ld+json">
     {
